@@ -1,0 +1,16 @@
+.first,
+.second,
+.third,
+.fourth {
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    border: 1px solid grey;
+    transition: width .5s;
+}
+
+.first:hover {}
+
+.rightside {
+    background: paleturquoise;
+}
