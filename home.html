@@ -18,6 +18,7 @@
     <style>
         body {
             font-family: 'Calibri';
+            overflow-x: hidden;
             /* background-color: #32B0E3; */
         }
         
@@ -34,10 +35,9 @@
         
         #particles-js {
             width: 100%;
-            height: 80%;
+            height: 50%;
             position: absolute;
-            z-index: -10;
-            top: 10%;
+            /* top: 10%; */
             left: 0
         }
         
@@ -54,10 +54,9 @@
         
         #particles-js2 {
             width: 100%;
-            height: 80%;
+            height: 50%;
             position: fixed;
-            z-index: -10;
-            top: 10%;
+            /* top: 10%; */
             left: 0
         }
         
@@ -148,10 +147,10 @@
                 height: 40%;
             }
             #particles-js {
-                top: 10%;
+                /* top: 10%; */
             }
             #particles-js2 {
-                top: 10%;
+                /* top: 10%; */
             }
         }
         
@@ -189,16 +188,21 @@
         .circle {
             position: relative;
             left: 50%;
-            margin-top: 50px;
+            margin-top: 150px;
             transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
+            width: 225px;
+            height: 225px;
             border: 5px solid #fff;
             box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
             border: solid 1px grey;
             border-radius: 50%;
             overflow: hidden;
             box-shadow: 10px 5px 5px rgb(151, 151, 151);
+        }
+        
+        .container {
+            margin-top: 25%;
+            width: 100%;
         }
         
         .content {
@@ -276,10 +280,13 @@
         
         @media screen and (max-height: 890px) {
             .circle {
-                margin-top: -10px;
+                margin-top: 200px;
             }
             .main svg text {
                 font-size: 4px;
+            }
+            .container {
+                margin-top: 0%;
             }
         }
         
@@ -298,8 +305,11 @@
             .main {
                 margin-top: 10%;
             }
+            .container {
+                margin-top: 0%;
+            }
             .circle {
-                top: 40%;
+                margin-top: 10px;
             }
         }
         
@@ -317,15 +327,145 @@
                 margin-right: 10px;
             }
         }
+        
+        .bird {
+            background-image: url('/images/bird-cells.svg');
+            background-size: auto 100%;
+            width: 88px;
+            z-index: -1;
+            height: 125px;
+            will-change: background-position;
+            animation-name: fly-cycle;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+        }
+        
+        .second-bird {
+            background-image: url('/images/bird-cells2.svg');
+            background-size: auto 100%;
+            width: 88px;
+            z-index: -1;
+            height: 125px;
+            will-change: background-position;
+            animation-name: fly-cycle;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+        }
+        
+        .bird--one {
+            animation-duration: 1s;
+            animation-delay: -0.5s;
+        }
+        
+        .bird--two {
+            animation-duration: 0.9s;
+            animation-delay: -0.75s;
+        }
+        
+        .bird--three {
+            animation-duration: 1.25s;
+            animation-delay: -0.25s;
+        }
+        
+        .bird--four {
+            animation-duration: 1.1s;
+            animation-delay: -0.5s;
+        }
+        
+        .bird-container {
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            transform: scale(0) translateX(-10vw);
+            will-change: transform;
+            animation-name: fly-right-one;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        .bird-container--one {
+            animation-duration: 15s;
+            animation-delay: 0;
+        }
+        
+        .bird-container--two {
+            animation-duration: 15s;
+            animation-delay: 1s;
+        }
+        
+        .bird-container--three {
+            animation-duration: 14.6s;
+            animation-delay: 9.5s;
+        }
+        
+        .bird-container--four {
+            animation-duration: 14.6s;
+            animation-delay: 10.25s;
+        }
+        
+        @keyframes fly-cycle {
+            100% {
+                background-position: -900px 0;
+            }
+        }
+        
+        @keyframes fly-right-one {
+            0% {
+                transform: scale(0.3) translateX(-10vw);
+            }
+            10% {
+                transform: translateY(2vh) translateX(10vw) scale(0.4);
+            }
+            20% {
+                transform: translateY(0vh) translateX(30vw) scale(0.5);
+            }
+            30% {
+                transform: translateY(4vh) translateX(50vw) scale(0.6);
+            }
+            40% {
+                transform: translateY(2vh) translateX(70vw) scale(0.6);
+            }
+            50% {
+                transform: translateY(0vh) translateX(90vw) scale(0.6);
+            }
+            60% {
+                transform: translateY(0vh) translateX(110vw) scale(0.6);
+            }
+            100% {
+                transform: translateY(0vh) translateX(110vw) scale(0.6);
+            }
+        }
+        
+        @keyframes fly-right-two {
+            0% {
+                transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+            }
+            10% {
+                transform: translateY(0vh) translateX(10vw) scale(0.4);
+            }
+            20% {
+                transform: translateY(-4vh) translateX(30vw) scale(0.6);
+            }
+            30% {
+                transform: translateY(1vh) translateX(50vw) scale(0.45);
+            }
+            40% {
+                transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+            }
+            50% {
+                transform: translateY(0vh) translateX(90vw) scale(0.45);
+            }
+            51% {
+                transform: translateY(0vh) translateX(110vw) scale(0.45);
+            }
+            100% {
+                transform: translateY(0vh) translateX(110vw) scale(0.45);
+            }
+        }
     </style>
 </head>
 
 <body>
-
-
-
-
-
 
     <nav class="navbar navbar-expand-md navbar-light ">
         <a href="#" class="navbar-brand"><img src="/images/waliv.png" width="180"></a>
@@ -333,7 +473,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-right: 150px">
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-right: 150px;z-index: 10">
 
             <div class="navbar-nav ml-auto">
                 <a href="#" style="margin-right: 20px;color: #234786" class="nav-item nav-link active">Home</a>
@@ -365,13 +505,93 @@
 
 
     <div class="main">
-        <svg viewbox="0 0 100 20">   
+
+        <div class="container">
+            <!-- <h1 style="text-align: center; color: #294FA4">Your Tasks, Our Services.</h1> -->
+
+            <div class="bird-container bird-container--one">
+
+                <div class="bird bird--one"></div>
+            </div>
+            <div class="bird-container bird-container--two">
+
+                <div class="second-bird bird--two"></div>
+            </div>
+            <div class="bird-container bird-container--three">
+
+                <div class="bird bird--three"></div>
+            </div>
+            <div class="bird-container bird-container--four">
+
+                <div class="second-bird bird--four"></div>
+            </div>
+
+
+            <!-- <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+
+            <div class="bird-container bird-container--four">
+                <div class="second-bird bird--four"></div> -->
+            <!-- </div> -->
+
+            <!-- <div class="second-bird-container second-bird-container--one">
+
+            <div class="second-bird second-bird--one"></div>
+        </div>
+
+        <div class="second-bird-container second-bird-container--two">
+            <div class="second-bird second-bird--two"></div>
+        </div>
+
+        <div class="second-bird-container second-bird-container--three">
+            <div class="second-bird second-bird--three"></div>
+        </div>
+
+        <div class="second-bird-container second-bird-container--four">
+            <div class="second-bird second-bird--four"></div>
+        </div> -->
+
+
+            <div class="circle">
+                <figure>
+
+                </figure>
+                <figure></figure>
+                <figure></figure>
+            </div>
+
+
+        </div>
+        <svg viewBox="0 0 120 28">
+                <defs>
+                  <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+                </defs> 
+            
+                 <use id="wave1" class="wave" xlink:href="#wave" x="0" y="-1"></use>
+                 <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use> 
+                <use id="wave4" class="wave" xlink:href="#wave" x="0" y="1"></use>
+              </svg>
+
+        <!-- 
+        <div id="particles-js"></div>
+        <div id="particles-js2"></div> -->
+    </div>
+
+    <div class="content">
+
+
+        <!-- <svg viewbox="0 0 100 20">   
                     <defs>
                       <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="10%" stop-color="#234786"/>
-                        <stop offset="90%" stop-color="#2DB1E9" />
+                        <stop offset="90%" stop-color="white"/>
+                        <stop offset="10%" stop-color="deepskyblue" />
                       </linearGradient>
-                      <pattern id="wave_circle" x="0" y="20" width="120" height="20" patternUnits="userSpaceOnUse">
+                      <pattern id="wave_circle" x="0" y="10" width="120" height="10" patternUnits="userSpaceOnUse">
                         <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
                           <animateTransform
                               attributeName="transform"
@@ -384,38 +604,12 @@
                         </path>
                       </pattern>
                     </defs>
-                    <text text-anchor="middle" x="50" y="10" font-size="5" fill="url(#wave_circle)"  fill-opacity="0.8">Your Tasks, Our Services</text>
-                    <text text-anchor="middle" x="50" y="10" font-size="5" fill="url(#gradient)" fill-opacity="0.5">Your Tasks, Our Services</text>
-                  </svg>
-
-
-
-        <div class="container">
-
-            <div class="circle">
-                <figure>
-
-                </figure>
-                <figure></figure>
-                <figure></figure>
-            </div>
-        </div>
-        <svg viewBox="0 0 120 28">
-                <defs>
-                  <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
-                </defs> 
-            
-                 <use id="wave1" class="wave" xlink:href="#wave" x="0" y="-1"></use>
-                 <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use> 
-                <use id="wave4" class="wave" xlink:href="#wave" x="0" y="1"></use>
-              </svg>
-
+                    <text text-anchor="middle" x="50" y="10" font-size="5" fill="url(#wave_circle)"  fill-opacity="0.8">About Us</text>
+                    <text text-anchor="middle" x="50" y="10" font-size="5" fill="url(#gradient)" fill-opacity="0.5">About Us</text>
+           
+                </svg> -->
         <div id="particles-js"></div>
-        <div id="particles-js2"></div>
-    </div>
-
-    <div class="content">
-        <h2>About Us</h2>
+        <h1 style="text-align: center;color: white">About Us</h1>
         <h4>
 
             Waliv Global Services established in year 2011 has been providing Maritime Administration and Fleet Services to international shipping companies and ship management companies around the globe.
@@ -426,10 +620,11 @@
 
     <div class="content2">
 
+
     </div>
 
 
-    <script src="/js/particles2.js"></script>
+
     <script src="/js/particles.js"></script>
     <script src="/js/app.js"></script>
 
