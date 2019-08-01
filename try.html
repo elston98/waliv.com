@@ -10,124 +10,59 @@
     <title>Document</title>
 
     <style>
-        .serviceBox {
-            display: inline;
-            width: 30%;
-            font-family: 'Niramit', sans-serif;
-            padding-bottom: 10px;
-            margin: 0 10px;
-            transition: all 0.3s ease 0s;
+        .container {
+            width: 100%;
+            margin: 150px auto;
         }
         
-        .serviceBox:hover {
-            box-shadow: 0 0 10px #999;
+        .move-zone {
+            position: relative;
+            width: 85%;
+            height: 985%;
+            margin: auto;
+            perspective: 800px;
         }
         
-        .serviceBox .service-icon {
-            color: #fff;
-            background: linear-gradient(to bottom, #f53b57, #f53b57, #ce102d);
-            font-size: 100px;
-            text-align: center;
-            line-height: 180px;
-            margin-bottom: 25px;
-            transition: all 0.3s ease 0s;
+        .layer {
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
         }
         
-        .serviceBox:hover .service-icon {
-            text-shadow: 0 0 10px #000;
-            box-shadow: 0 0 10px #fff inset;
+        .layer-2 {
+            position: absolute;
+            padding: 2px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            left: 20%;
+            top: 14% !important;
+            transform: translate(100px) !important;
         }
         
-        .serviceBox .service-content {
-            padding: 0 10px;
-            margin: 0 15px;
-            border-left: 2px solid #808080;
-        }
-        
-        .serviceBox .title {
-            color: #808080;
-            font-size: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin: 0 0 10px;
-            transition: all 0.3s;
-        }
-        
-        .serviceBox:hover .title {
-            color: #ce102d;
-        }
-        
-        .serviceBox .description {
-            color: rgba(0, 0, 0, 0.5);
-            font-size: 15px;
-            line-height: 25px;
-        }
-        
-        .serviceBox.blue .service-icon {
-            background: linear-gradient(to bottom, #1dc4e5, #1dc4e5, #1298b3);
-        }
-        
-        .serviceBox.blue:hover .title {
-            color: #1298b3;
-        }
-        
-        .serviceBox.green .service-icon {
-            background: linear-gradient(to bottom, #21c666, #21c666, #1e9650);
-        }
-        
-        .serviceBox.green:hover .title {
-            color: #1e9650;
-        }
-        
-        .serviceBox.purple .service-icon {
-            background: linear-gradient(to bottom, #932ef2, #932ef2, #620faf);
-        }
-        
-        .serviceBox.purple:hover .title {
-            color: #620faf;
-        }
-        
-        @media only screen and (max-width:990px) {
-            .serviceBox {
-                margin: 0 0 50px;
-            }
+        .layer-2 img {
+            overflow: visible;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="row ">
-        <div class="col-md-3 col-sm-6 ">
-            <div class="serviceBox ">
-                <div class="service-icon ">
-                    <i class="fa fa-globe "></i>
+    <div class="container">
+        <div class="moving">
+            <div class="layer">
+                <img class="margin" src="/images/sky-690293_1920.jpg" width="10%">
+                <div class="moving-2">
+                    <div class="layer-2">
+                        <img src="images/Vessel.png" width="100%">
+                    </div>
                 </div>
-                <div class="service-content ">
-                    <h3 class="title ">Web Design</h3>
-                    <p class="description ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="col-md-5 col-sm-7 ">
-        <div class="serviceBox blue ">
-            <div class="service-icon ">
-                <i class="fa fa-rocket "></i>
-            </div>
-            <div class="service-content ">
-                <h3 class="title ">Web Development</h3>
-                <p class="description ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.
-                </p>
             </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
