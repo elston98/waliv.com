@@ -1,16 +1,19 @@
-.first,
-.second,
-.third,
-.fourth {
-    display: flex;
-    height: 50vh;
-    width: 100%;
-    border: 1px solid grey;
-    transition: width .5s;
+body {
+    font-family: 'Calibir';
 }
 
-.first:hover {}
+.services {
+    margin-left: 10px;
+}
 
-.rightside {
-    background: paleturquoise;
+.services-item {
+    width: 20%;
+    height: 40vh;
+    overflow: hidden;
+    background-color: none;
+    position: relative;
+}
+
+.services-item:hover {
+    animation: none;
 }

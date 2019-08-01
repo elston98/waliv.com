@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -16,6 +16,13 @@
     <title>Home</title>
 
     <style>
+         :root {
+            --color_1: #eb3b5a;
+            --color_2: #fa8231;
+            --color_3: #8854d0;
+            --color_4: #20bf6b;
+        }
+        
         body {
             font-family: 'Calibri';
             overflow-x: hidden;
@@ -200,6 +207,96 @@
             box-shadow: 10px 5px 5px rgb(151, 151, 151);
         }
         
+        .circle-service {
+            position: relative;
+            left: 50%;
+            margin-top: 150px;
+            transform: translate(-50%, -50%);
+            width: 225px;
+            background: #294FA4;
+            height: 225px;
+            border-radius: 50%;
+            /* animation: ripple 0.7s linear infinite; */
+            -webkit-transition: height 0.25s ease, width 0.25s ease;
+            transition: height 0.25s ease, width 0.25s ease;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle-service:before,
+        .circle.service:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 50%;
+            border: solid rgb(255, 255, 255, 0.4);
+        }
+        
+        .circle-service:before {
+            animation: ripple 2s linear infinite;
+        }
+        
+        .circle-service:after {
+            animation: ripple 2s linear 1s infinite;
+        }
+        
+        .circle-service:hover:before,
+        .circle-service:hover:after {
+            animation: none;
+            outline: none;
+        }
+        
+        .circle-service img {
+            transition: all 0.65s;
+            transform: rotateY(0deg);
+        }
+        
+        .circle-service:hover img {
+            transition: all 0.65s;
+            transform: rotateY(180deg);
+        }
+        
+        @-webkit-keyframes ripple {
+            0% {
+                -webkit-transform: scale(0.5);
+                opacity: 1;
+            }
+            50% {
+                -webkit-transform: scale(1);
+                opacity: 0.5;
+            }
+            75% {
+                transform: scale(1.25);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.13);
+                opacity: 0.5;
+            }
+            75% {
+                transform: scale(1.16);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+        
         .container {
             margin-top: 25%;
             width: 100%;
@@ -207,9 +304,15 @@
         
         .content {
             width: 100%;
-            height: 50%;
+            height: 60%;
+            z-index: 2;
+            margin-top: 8.5%;
             font-size: 10px;
-            background: #294FA4;
+            background: linear-gradient(to bottom, #294FA4 10%, black 90%)
+        }
+        
+        .content img {
+            float: right;
         }
         
         .content h2 {
@@ -225,8 +328,8 @@
         
         .content2 {
             width: 100%;
-            height: 50%;
-            background: #294FA4;
+            height: 60%;
+            background: black;
         }
         
         figure {
@@ -249,6 +352,70 @@
             background-size: cover 100%;
             opacity: 0.75;
             animation: rotate-land 8s infinite linear;
+        }
+        
+        .swing {
+            position: relative;
+            animation: swing ease-in-out 2s infinite alternate;
+            transform-origin: center -20px;
+            float: left;
+        }
+        
+        .swing2 {
+            animation: swing2 ease-in-out 2.5s infinite alternate-reverse;
+            transform-origin: center -20px;
+            float: right;
+        }
+        
+        .swing img {
+            display: block;
+            height: 200px;
+        }
+        
+        .swing2 img {
+            display: block;
+            height: 300px;
+        }
+        
+        .swing:after {
+            content: '';
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            top: -10px;
+            left: 50%;
+            z-index: 0;
+            transform: rotate(25deg);
+        }
+        /* nail */
+        
+        .swing:before {
+            content: '';
+            position: fixed;
+            width: 5px;
+            height: 5px;
+            top: -14px;
+            left: 54%;
+            z-index: 5;
+            border-radius: 50% 50%;
+        }
+        
+        @keyframes swing {
+            0% {
+                transform: translate(0, 10px);
+            }
+            100% {
+                transform: translate(0, -10px);
+            }
+        }
+        
+        @keyframes swing2 {
+            0% {
+                transform: translate(10px, 10px);
+            }
+            100% {
+                transform: translate(-10px, -10px);
+            }
         }
         
         @keyframes try {
@@ -277,7 +444,7 @@
                 background-position: 0 0;
             }
         }
-        
+        /*         
         @media screen and (max-height: 890px) {
             .circle {
                 margin-top: 200px;
@@ -288,19 +455,16 @@
             .container {
                 margin-top: 0%;
             }
-        }
-        
-        @media screen and (max-width: 1440px) {}
-        
-        @media screen and (max-width:1000px) {
+        } */
+        /* @media screen and (max-width:1000px) {
             .circle {
                 top: 50%;
             }
             .main svg text {
                 font-size: 5px;
             }
-        }
-        
+        } */
+        /*         
         @media screen and (max-width: 890px) {
             .main {
                 margin-top: 10%;
@@ -312,19 +476,263 @@
                 margin-top: 10px;
             }
         }
-        
-        @media screen and (max-width:500px) {
+                 */
+        /* @media screen and (max-width:500px) {
             .main {
                 margin-top: 10%;
             }
             .circle {
-                margin-top: 10%;
+                margin-top: 50%;
                 width: 100px;
                 height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
             }
             .content h4 {
                 margin-left: 10px;
                 margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        /* @media screen and (max-height:825px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 70%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        /*  
+        @media screen and (max-height:680px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:750px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:820px) {
+            .circle {
+                margin-top: 70%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 70%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        /* @media screen and (max-height:1024px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        
+        @media screen and (max-height:825px) {
+            .circle {
+                margin-top: 50%;
+            }
+            .main svg {
+                margin-top: 45%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:815px) {
+            .circle {
+                margin-top: 60%;
+                width: 200px;
+                height: 200px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:770px) {
+            .circle {
+                margin-top: -10%;
+            }
+            .main svg {
+                margin-top: -5%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:740px) {
+            .circle {
+                margin-top: 50%;
+            }
+            .main svg {
+                margin-top: 25%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:570px) {
+            .circle {
+                margin-top: 50%;
+                width: 150px;
+                height: 150px;
+            }
+            .main svg {
+                margin-top: 20%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
             }
         }
         
@@ -527,35 +935,6 @@
             </div>
 
 
-            <!-- <div class="bird-container bird-container--two">
-                <div class="bird bird--two"></div>
-            </div>
-
-            <div class="bird-container bird-container--three">
-                <div class="bird bird--three"></div>
-            </div>
-
-            <div class="bird-container bird-container--four">
-                <div class="second-bird bird--four"></div> -->
-            <!-- </div> -->
-
-            <!-- <div class="second-bird-container second-bird-container--one">
-
-            <div class="second-bird second-bird--one"></div>
-        </div>
-
-        <div class="second-bird-container second-bird-container--two">
-            <div class="second-bird second-bird--two"></div>
-        </div>
-
-        <div class="second-bird-container second-bird-container--three">
-            <div class="second-bird second-bird--three"></div>
-        </div>
-
-        <div class="second-bird-container second-bird-container--four">
-            <div class="second-bird second-bird--four"></div>
-        </div> -->
-
 
             <div class="circle">
                 <figure>
@@ -583,50 +962,54 @@
     </div>
 
     <div class="content">
-
-
-        <!-- <svg viewbox="0 0 100 20">   
-                    <defs>
-                      <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="90%" stop-color="white"/>
-                        <stop offset="10%" stop-color="deepskyblue" />
-                      </linearGradient>
-                      <pattern id="wave_circle" x="0" y="10" width="120" height="10" patternUnits="userSpaceOnUse">
-                        <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
-                          <animateTransform
-                              attributeName="transform"
-                              begin="0s"
-                              dur="1.5s"
-                              type="translate"
-                              from="0,0"
-                              to="40,0"
-                              repeatCount="indefinite" />
-                        </path>
-                      </pattern>
-                    </defs>
-                    <text text-anchor="middle" x="50" y="10" font-size="5" fill="url(#wave_circle)"  fill-opacity="0.8">About Us</text>
-                    <text text-anchor="middle" x="50" y="10" font-size="5" fill="url(#gradient)" fill-opacity="0.5">About Us</text>
-           
-                </svg> -->
         <div id="particles-js"></div>
+
         <h1 style="text-align: center;color: white">About Us</h1>
         <h4>
 
             Waliv Global Services established in year 2011 has been providing Maritime Administration and Fleet Services to international shipping companies and ship management companies around the globe.
         </h4>
+
+        <div class="swing">
+            <img src="/images/Squid.png">
+        </div>
+        <div class="swing2">
+            <img src="/images/Squid.png">
+        </div>
+
     </div>
-
-
 
     <div class="content2">
 
+        <!-- <section class="services"> -->
+        <h1 style="text-align:center;color:white">OUR SERVICES</h1>
+
+        <div class="col-lg-3 col-md-6">
+            <!-- <div class="services-item" style="display:table-cell; vertical-align:middle; text-align:center"> -->
+            <div class="circle-service">
+                <img src="/images/Technical.png" width="150" height="150" style="margin-top:30px;margin-left:30px">
+
+                <h4 style="color:white;text-align:center;margin-top:60px ">Technical Management</h4>
+            </div>
+
+
+
+        </div>
+
 
     </div>
 
 
+    </div>
+    </div>
 
-    <script src="/js/particles.js"></script>
-    <script src="/js/app.js"></script>
+
+    <!-- </section> -->
+
+
+
+    <script src="/js/particles.js "></script>
+    <script src="/js/app.js "></script>
 
 
 

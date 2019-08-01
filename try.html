@@ -3,161 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta http-equiv=" X-UA-Compatible " content="ie=edge ">
     <title>Document</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
+        .serviceBox {
+            display: inline;
+            width: 30%;
+            font-family: 'Niramit', sans-serif;
+            padding-bottom: 10px;
+            margin: 0 10px;
+            transition: all 0.3s ease 0s;
         }
         
-        h1 {
-            font-family: 'Arima Madurai', cursive;
-            color: black;
-            font-size: 4rem;
-            letter-spacing: -3px;
-            text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
-            position: relative;
-            z-index: 3;
+        .serviceBox:hover {
+            box-shadow: 0 0 10px #999;
         }
         
-        .container {
-            z-index: 1;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 35rem;
-            background-blend-mode: soft-light;
-            background-size: cover;
-            background-position: center center;
-            padding: 2rem;
+        .serviceBox .service-icon {
+            color: #fff;
+            background: linear-gradient(to bottom, #f53b57, #f53b57, #ce102d);
+            font-size: 100px;
+            text-align: center;
+            line-height: 180px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease 0s;
         }
         
-        .bird {
-            background-image: url('/images/bird-cells.svg');
-            background-size: auto 100%;
-            width: 88px;
-            height: 125px;
-            will-change: background-position;
-            animation-name: fly-cycle;
-            animation-timing-function: steps(10);
-            animation-iteration-count: infinite;
+        .serviceBox:hover .service-icon {
+            text-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #fff inset;
         }
         
-        .bird--one {
-            animation-duration: 1s;
-            animation-delay: -0.5s;
+        .serviceBox .service-content {
+            padding: 0 10px;
+            margin: 0 15px;
+            border-left: 2px solid #808080;
         }
         
-        .bird--two {
-            animation-duration: 0.9s;
-            animation-delay: -0.75s;
+        .serviceBox .title {
+            color: #808080;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0 0 10px;
+            transition: all 0.3s;
         }
         
-        .bird--three {
-            animation-duration: 1.25s;
-            animation-delay: -0.25s;
+        .serviceBox:hover .title {
+            color: #ce102d;
         }
         
-        .bird--four {
-            animation-duration: 1.1s;
-            animation-delay: -0.5s;
+        .serviceBox .description {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 15px;
+            line-height: 25px;
         }
         
-        .bird-container {
-            position: absolute;
-            top: 20%;
-            left: -10%;
-            transform: scale(0) translateX(-10vw);
-            will-change: transform;
-            animation-name: fly-right-one;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+        .serviceBox.blue .service-icon {
+            background: linear-gradient(to bottom, #1dc4e5, #1dc4e5, #1298b3);
         }
         
-        .bird-container--one {
-            animation-duration: 15s;
-            animation-delay: 0;
+        .serviceBox.blue:hover .title {
+            color: #1298b3;
         }
         
-        .bird-container--two {
-            animation-duration: 16s;
-            animation-delay: 1s;
+        .serviceBox.green .service-icon {
+            background: linear-gradient(to bottom, #21c666, #21c666, #1e9650);
         }
         
-        .bird-container--three {
-            animation-duration: 14.6s;
-            animation-delay: 9.5s;
+        .serviceBox.green:hover .title {
+            color: #1e9650;
         }
         
-        .bird-container--four {
-            animation-duration: 16s;
-            animation-delay: 10.25s;
+        .serviceBox.purple .service-icon {
+            background: linear-gradient(to bottom, #932ef2, #932ef2, #620faf);
         }
         
-        @keyframes fly-cycle {
-            100% {
-                background-position: -900px 0;
-            }
+        .serviceBox.purple:hover .title {
+            color: #620faf;
         }
         
-        @keyframes fly-right-one {
-            0% {
-                transform: scale(0.3) translateX(-10vw);
-            }
-            10% {
-                transform: translateY(2vh) translateX(10vw) scale(0.4);
-            }
-            20% {
-                transform: translateY(0vh) translateX(30vw) scale(0.5);
-            }
-            30% {
-                transform: translateY(4vh) translateX(50vw) scale(0.6);
-            }
-            40% {
-                transform: translateY(2vh) translateX(70vw) scale(0.6);
-            }
-            50% {
-                transform: translateY(0vh) translateX(90vw) scale(0.6);
-            }
-            60% {
-                transform: translateY(0vh) translateX(110vw) scale(0.6);
-            }
-            100% {
-                transform: translateY(0vh) translateX(110vw) scale(0.6);
-            }
-        }
-        
-        @keyframes fly-right-two {
-            0% {
-                transform: translateY(-2vh) translateX(-10vw) scale(0.5);
-            }
-            10% {
-                transform: translateY(0vh) translateX(10vw) scale(0.4);
-            }
-            20% {
-                transform: translateY(-4vh) translateX(30vw) scale(0.6);
-            }
-            30% {
-                transform: translateY(1vh) translateX(50vw) scale(0.45);
-            }
-            40% {
-                transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
-            }
-            50% {
-                transform: translateY(0vh) translateX(90vw) scale(0.45);
-            }
-            51% {
-                transform: translateY(0vh) translateX(110vw) scale(0.45);
-            }
-            100% {
-                transform: translateY(0vh) translateX(110vw) scale(0.45);
+        @media only screen and (max-width:990px) {
+            .serviceBox {
+                margin: 0 0 50px;
             }
         }
     </style>
@@ -165,28 +97,37 @@
 
 <body>
 
-
-    <div class="container_birds">
-
-        <h1>SVG Animated Birds</h1>
-
-        <div class="bird-container bird-container--one">
-            <div class="bird bird--one"></div>
-        </div>
-
-        <div class="bird-container bird-container--two">
-            <div class="bird bird--two"></div>
-        </div>
-
-        <div class="bird-container bird-container--three">
-            <div class="bird bird--three"></div>
-        </div>
-
-        <div class="bird-container bird-container--four">
-            <div class="bird bird--four"></div>
+    <div class="row ">
+        <div class="col-md-3 col-sm-6 ">
+            <div class="serviceBox ">
+                <div class="service-icon ">
+                    <i class="fa fa-globe "></i>
+                </div>
+                <div class="service-content ">
+                    <h3 class="title ">Web Design</h3>
+                    <p class="description ">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.
+                    </p>
+                </div>
+            </div>
         </div>
 
     </div>
+
+    <div class="col-md-5 col-sm-7 ">
+        <div class="serviceBox blue ">
+            <div class="service-icon ">
+                <i class="fa fa-rocket "></i>
+            </div>
+            <div class="service-content ">
+                <h3 class="title ">Web Development</h3>
+                <p class="description ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.
+                </p>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
