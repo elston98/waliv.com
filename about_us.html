@@ -314,7 +314,7 @@
         }
         
         .container {
-            margin-top: 20%;
+            margin-top: 10%;
             width: 100%;
         }
         
@@ -517,7 +517,23 @@
                 background-position: 0 0;
             }
         }
-        /*         
+        
+        .w {
+            display: inline-block;
+            -webkit-animation: wave 2s infinite;
+        }
+        /* original css from shillingburg.co */
+        
+        @-webkit-keyframes wave {
+            0% {
+                -webkit-transform: translate(2px, -2px);
+                text-shadow: -5px 5px 0px rgba(22, 39, 255, 0.2);
+            }
+            50% {
+                -webkit-transform: translate(0px, 2px);
+                text-shadow: 0px 0px 0px rgba(22, 39, 73, 0.2);
+            }
+            /*         
         @media screen and (max-height: 890px) {
             .circle {
                 margin-top: 200px;
@@ -529,7 +545,7 @@
                 margin-top: 0%;
             }
         } */
-        /* @media screen and (max-width:1000px) {
+            /* @media screen and (max-width:1000px) {
             .circle {
                 top: 50%;
             }
@@ -537,7 +553,7 @@
                 font-size: 5px;
             }
         } */
-        /*         
+            /*         
         @media screen and (max-width: 890px) {
             .main {
                 margin-top: 10%;
@@ -550,7 +566,7 @@
             }
         }
                  */
-        /* @media screen and (max-width:500px) {
+            /* @media screen and (max-width:500px) {
             .main {
                 margin-top: 10%;
             }
@@ -576,7 +592,7 @@
                 height: 150px;
             }
         } */
-        /* @media screen and (max-height:825px) {
+            /* @media screen and (max-height:825px) {
             .circle {
                 margin-top: 50%;
                 width: 100px;
@@ -599,7 +615,7 @@
                 height: 150px;
             }
         } */
-        /*  
+            /*  
         @media screen and (max-height:680px) {
             .circle {
                 margin-top: 50%;
@@ -671,7 +687,7 @@
                 height: 150px;
             }
         } */
-        /* @media screen and (max-height:1024px) {
+            /* @media screen and (max-height:1024px) {
             .circle {
                 margin-top: 50%;
                 width: 100px;
@@ -694,6 +710,7 @@
                 height: 150px;
             }
         } */
+        }
         
         @media screen and (max-height:825px) {
             .circle {
@@ -1184,6 +1201,9 @@
             });
         });
     </script> -->
+
+    <script>
+    </script>
 
     <script src="/js/particles.js "></script>
     <script src="/js/app.js "></script>
