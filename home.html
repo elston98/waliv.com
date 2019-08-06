@@ -454,7 +454,7 @@
             margin-left: auto;
             margin-right: auto;
             width: 30%;
-            opacity: 0.4;
+            opacity: 0.1;
             height: 300px;
         }
         
@@ -1150,7 +1150,7 @@
 
         </div> -->
 
-        <div class="service-container">
+        <div class="service-container ml5">
             <div class="service-container-box">
 
                 <div class="circle-service">
@@ -1242,16 +1242,16 @@
 
         </div>
 
-    </footer> -->
+    </footer>
 
-
+ -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
     <script src="/js/particles.js "></script>
     <script src="/js/app.js "></script>
-
+    <!-- 
     <script>
         function send_contact() {
             var name = $('#txtname').val();
@@ -1283,7 +1283,7 @@
                 },
             });
         }
-    </script>
+    </script> -->
 
     <script>
         // Wrap every letter in a span
@@ -1313,6 +1313,23 @@
                 })
                 .add({
                     targets: '.ml4 .letter',
+                    translateX: [40, 0],
+                    translateZ: 0,
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 8000
+
+
+                })
+
+            var textWrapper = document.querySelector('.ml5');
+
+
+            anime.timeline({
+                    loop: false
+                })
+                .add({
+                    targets: '.ml5 .letter',
                     translateX: [40, 0],
                     translateZ: 0,
                     opacity: [0, 1],
