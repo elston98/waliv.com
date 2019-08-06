@@ -16,7 +16,7 @@
     <title>About</title>
 
     <style>
-         :root {
+     :root {
             --color_1: #eb3b5a;
             --color_2: #fa8231;
             --color_3: #8854d0;
@@ -517,11 +517,10 @@
                 background-position: 0 0;
             }
         }
-        
-        .w {
+        /* .w {
             display: inline-block;
             -webkit-animation: wave 2s infinite;
-        }
+        } */
         /* original css from shillingburg.co */
         
         @-webkit-keyframes wave {
@@ -533,7 +532,27 @@
                 -webkit-transform: translate(0px, 2px);
                 text-shadow: 0px 0px 0px rgba(22, 39, 73, 0.2);
             }
-            /*         
+        }
+        
+        .anim {
+            animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+        }
+        
+        @keyframes tracking-in-expand-fwd-bottom {
+            0% {
+                letter-spacing: -0.5em;
+                transform: translateZ(-700px) translateY(500px);
+                opacity: 0.2;
+            }
+            40% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateZ(0) translateY(0);
+                opacity: 1;
+            }
+        }
+        /*         
         @media screen and (max-height: 890px) {
             .circle {
                 margin-top: 200px;
@@ -545,7 +564,7 @@
                 margin-top: 0%;
             }
         } */
-            /* @media screen and (max-width:1000px) {
+        /* @media screen and (max-width:1000px) {
             .circle {
                 top: 50%;
             }
@@ -553,7 +572,7 @@
                 font-size: 5px;
             }
         } */
-            /*         
+        /*         
         @media screen and (max-width: 890px) {
             .main {
                 margin-top: 10%;
@@ -566,7 +585,7 @@
             }
         }
                  */
-            /* @media screen and (max-width:500px) {
+        /* @media screen and (max-width:500px) {
             .main {
                 margin-top: 10%;
             }
@@ -592,7 +611,7 @@
                 height: 150px;
             }
         } */
-            /* @media screen and (max-height:825px) {
+        /* @media screen and (max-height:825px) {
             .circle {
                 margin-top: 50%;
                 width: 100px;
@@ -615,7 +634,7 @@
                 height: 150px;
             }
         } */
-            /*  
+        /*  
         @media screen and (max-height:680px) {
             .circle {
                 margin-top: 50%;
@@ -687,7 +706,7 @@
                 height: 150px;
             }
         } */
-            /* @media screen and (max-height:1024px) {
+        /* @media screen and (max-height:1024px) {
             .circle {
                 margin-top: 50%;
                 width: 100px;
@@ -710,302 +729,329 @@
                 height: 150px;
             }
         } */
+    }
+    @media screen and (max-height:825px) {
+        .circle {
+            margin-top: 50%;
         }
         
-        @media screen and (max-height:825px) {
-            .circle {
-                margin-top: 50%;
-            }
-            .main svg {
-                margin-top: 45%;
-            }
-            .content {
-                width: 100%;
-            }
-            .content2 {
-                height: 100%;
-            }
-            .content h4 {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            .swing img {
-                height: 100px;
-            }
-            .swing2 img {
-                height: 150px;
-            }
+        .main svg {
+            margin-top: 45%;
         }
         
-        @media screen and (max-height:815px) {
-            .circle {
-                margin-top: 60%;
-                width: 200px;
-                height: 200px;
-            }
-            .main svg {
-                margin-top: 50%;
-            }
-            .content {
-                width: 100%;
-            }
-            .content2 {
-                height: 100%;
-            }
-            .content h4 {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            .swing img {
-                height: 100px;
-            }
-            .swing2 img {
-                height: 150px;
-            }
+        .content {
+            width: 100%;
         }
         
-        @media screen and (max-height:770px) {
-            .circle {
-                margin-top: -10%;
-            }
-            .main svg {
-                margin-top: -5%;
-            }
-            .content {
-                width: 100%;
-            }
-            .content2 {
-                height: 100%;
-            }
-            .content h4 {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            .swing img {
-                height: 100px;
-            }
-            .swing2 img {
-                height: 150px;
-            }
+        .content2 {
+            height: 100%;
         }
         
-        @media screen and (max-height:740px) {
-            .circle {
-                margin-top: 50%;
-            }
-            .main svg {
-                margin-top: 25%;
-            }
-            .content {
-                width: 100%;
-            }
-            .content2 {
-                height: 100%;
-            }
-            .content h4 {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            .swing img {
-                height: 100px;
-            }
-            .swing2 img {
-                height: 150px;
-            }
+        .content h4 {
+            margin-left: 10px;
+            margin-right: 10px;
         }
         
-        @media screen and (max-height: 636px) {
-            .main svg {
-                margin-top: 5%;
-            }
-            .content {
-                width: 100%;
-            }
-            .content2 {
-                height: 100%;
-            }
-            .content h4 {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            .swing img {
-                height: 100px;
-            }
-            .swing2 img {
-                height: 150px;
-            }
+        .swing img {
+            height: 100px;
         }
         
-        @media screen and (max-height:570px) {
-            .circle {
-                margin-top: 50%;
-                width: 150px;
-                height: 150px;
-            }
-            .main svg {
-                margin-top: 20%;
-            }
-            .content {
-                width: 100%;
-            }
-            .content2 {
-                height: 100%;
-            }
-            .content h4 {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            .swing img {
-                height: 100px;
-            }
-            .swing2 img {
-                height: 150px;
-            }
+        .swing2 img {
+            height: 150px;
+        }
+    }
+    @media screen and (max-height:815px) {
+        .circle {
+            margin-top: 60%;
+            width: 200px;
+            height: 200px;
         }
         
-        .bird {
-            background-image: url('/images/bird-cells.svg');
-            background-size: auto 100%;
-            width: 88px;
-            z-index: -1;
-            height: 125px;
-            will-change: background-position;
-            animation-name: fly-cycle;
-            animation-timing-function: steps(10);
-            animation-iteration-count: infinite;
+        .main svg {
+            margin-top: 50%;
         }
         
-        .second-bird {
-            background-image: url('/images/bird-cells2.svg');
-            background-size: auto 100%;
-            width: 88px;
-            z-index: -1;
-            height: 125px;
-            will-change: background-position;
-            animation-name: fly-cycle;
-            animation-timing-function: steps(10);
-            animation-iteration-count: infinite;
+        .content {
+            width: 100%;
         }
         
-        .bird--one {
-            animation-duration: 1s;
-            animation-delay: -0.5s;
+        .content2 {
+            height: 100%;
         }
         
-        .bird--two {
-            animation-duration: 0.9s;
-            animation-delay: -0.75s;
+        .content h4 {
+            margin-left: 10px;
+            margin-right: 10px;
         }
         
-        .bird--three {
-            animation-duration: 1.25s;
-            animation-delay: -0.25s;
+        .swing img {
+            height: 100px;
         }
         
-        .bird--four {
-            animation-duration: 1.1s;
-            animation-delay: -0.5s;
+        .swing2 img {
+            height: 150px;
+        }
+    }
+    @media screen and (max-height:770px) {
+        .circle {
+            margin-top: -10%;
         }
         
-        .bird-container {
-            position: absolute;
-            top: 20%;
-            left: -10%;
-            transform: scale(0) translateX(-10vw);
-            will-change: transform;
-            animation-name: fly-right-one;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+        .main svg {
+            margin-top: -5%;
         }
         
-        .bird-container--one {
-            animation-duration: 15s;
-            animation-delay: 0;
+        .content {
+            width: 100%;
         }
         
-        .bird-container--two {
-            animation-duration: 15s;
-            animation-delay: 1s;
+        .content2 {
+            height: 100%;
         }
         
-        .bird-container--three {
-            animation-duration: 14.6s;
-            animation-delay: 9.5s;
+        .content h4 {
+            margin-left: 10px;
+            margin-right: 10px;
         }
         
-        .bird-container--four {
-            animation-duration: 14.6s;
-            animation-delay: 10.25s;
+        .swing img {
+            height: 100px;
         }
         
-        @keyframes fly-cycle {
-            100% {
-                background-position: -900px 0;
-            }
+        .swing2 img {
+            height: 150px;
+        }
+    }
+    @media screen and (max-height:740px) {
+        .circle {
+            margin-top: 50%;
         }
         
-        @keyframes fly-right-one {
-            0% {
-                transform: scale(0.3) translateX(-10vw);
-            }
-            10% {
-                transform: translateY(2vh) translateX(10vw) scale(0.4);
-            }
-            20% {
-                transform: translateY(0vh) translateX(30vw) scale(0.5);
-            }
-            30% {
-                transform: translateY(4vh) translateX(50vw) scale(0.6);
-            }
-            40% {
-                transform: translateY(2vh) translateX(70vw) scale(0.6);
-            }
-            50% {
-                transform: translateY(0vh) translateX(90vw) scale(0.6);
-            }
-            60% {
-                transform: translateY(0vh) translateX(110vw) scale(0.6);
-            }
-            100% {
-                transform: translateY(0vh) translateX(110vw) scale(0.6);
-            }
+        .main svg {
+            margin-top: 25%;
         }
         
-        @keyframes fly-right-two {
-            0% {
-                transform: translateY(-2vh) translateX(-10vw) scale(0.5);
-            }
-            10% {
-                transform: translateY(0vh) translateX(10vw) scale(0.4);
-            }
-            20% {
-                transform: translateY(-4vh) translateX(30vw) scale(0.6);
-            }
-            30% {
-                transform: translateY(1vh) translateX(50vw) scale(0.45);
-            }
-            40% {
-                transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
-            }
-            50% {
-                transform: translateY(0vh) translateX(90vw) scale(0.45);
-            }
-            51% {
-                transform: translateY(0vh) translateX(110vw) scale(0.45);
-            }
-            100% {
-                transform: translateY(0vh) translateX(110vw) scale(0.45);
-            }
+        .content {
+            width: 100%;
         }
         
-        .navbar-fixed-top.scrolled {
-            background-color: #fff !important;
-            transition: background-color 200ms linear;
+        .content2 {
+            height: 100%;
         }
         
-        .bg {
-            background-color: white;
+        .content h4 {
+            margin-left: 10px;
+            margin-right: 10px;
         }
+        
+        .swing img {
+            height: 100px;
+        }
+        
+        .swing2 img {
+            height: 150px;
+        }
+    }
+    @media screen and (max-height: 636px) {
+        .main svg {
+            margin-top: 5%;
+        }
+        
+        .content {
+            width: 100%;
+        }
+        
+        .content2 {
+            height: 100%;
+        }
+        
+        .content h4 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .swing img {
+            height: 100px;
+        }
+        
+        .swing2 img {
+            height: 150px;
+        }
+    }
+    @media screen and (max-height:570px) {
+        .circle {
+            margin-top: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .main svg {
+            margin-top: 20%;
+        }
+        
+        .content {
+            width: 100%;
+        }
+        
+        .content2 {
+            height: 100%;
+        }
+        
+        .content h4 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .swing img {
+            height: 100px;
+        }
+        
+        .swing2 img {
+            height: 150px;
+        }
+    }
+    .bird {
+        background-image: url('/images/bird-cells.svg');
+        background-size: auto 100%;
+        width: 88px;
+        z-index: -1;
+        height: 125px;
+        will-change: background-position;
+        animation-name: fly-cycle;
+        animation-timing-function: steps(10);
+        animation-iteration-count: infinite;
+    }
+    .second-bird {
+        background-image: url('/images/bird-cells2.svg');
+        background-size: auto 100%;
+        width: 88px;
+        z-index: -1;
+        height: 125px;
+        will-change: background-position;
+        animation-name: fly-cycle;
+        animation-timing-function: steps(10);
+        animation-iteration-count: infinite;
+    }
+    .bird--one {
+        animation-duration: 1s;
+        animation-delay: -0.5s;
+    }
+    .bird--two {
+        animation-duration: 0.9s;
+        animation-delay: -0.75s;
+    }
+    .bird--three {
+        animation-duration: 1.25s;
+        animation-delay: -0.25s;
+    }
+    .bird--four {
+        animation-duration: 1.1s;
+        animation-delay: -0.5s;
+    }
+    .bird-container {
+        position: absolute;
+        top: 20%;
+        left: -10%;
+        transform: scale(0) translateX(-10vw);
+        will-change: transform;
+        animation-name: fly-right-one;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .bird-container--one {
+        animation-duration: 15s;
+        animation-delay: 0;
+    }
+    .bird-container--two {
+        animation-duration: 15s;
+        animation-delay: 1s;
+    }
+    .bird-container--three {
+        animation-duration: 14.6s;
+        animation-delay: 9.5s;
+    }
+    .bird-container--four {
+        animation-duration: 14.6s;
+        animation-delay: 10.25s;
+    }
+    @keyframes fly-cycle {
+        100% {
+            background-position: -900px 0;
+        }
+    }
+    @keyframes fly-right-one {
+        0% {
+            transform: scale(0.3) translateX(-10vw);
+        }
+        
+        10% {
+            transform: translateY(2vh) translateX(10vw) scale(0.4);
+        }
+        
+        20% {
+            transform: translateY(0vh) translateX(30vw) scale(0.5);
+        }
+        
+        30% {
+            transform: translateY(4vh) translateX(50vw) scale(0.6);
+        }
+        
+        40% {
+            transform: translateY(2vh) translateX(70vw) scale(0.6);
+        }
+        
+        50% {
+            transform: translateY(0vh) translateX(90vw) scale(0.6);
+        }
+        
+        60% {
+            transform: translateY(0vh) translateX(110vw) scale(0.6);
+        }
+        
+        100% {
+            transform: translateY(0vh) translateX(110vw) scale(0.6);
+        }
+    }
+    @keyframes fly-right-two {
+        0% {
+            transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+        }
+        
+        10% {
+            transform: translateY(0vh) translateX(10vw) scale(0.4);
+        }
+        
+        20% {
+            transform: translateY(-4vh) translateX(30vw) scale(0.6);
+        }
+        
+        30% {
+            transform: translateY(1vh) translateX(50vw) scale(0.45);
+        }
+        
+        40% {
+            transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+        }
+        
+        50% {
+            transform: translateY(0vh) translateX(90vw) scale(0.45);
+        }
+        
+        51% {
+            transform: translateY(0vh) translateX(110vw) scale(0.45);
+        }
+        
+        100% {
+            transform: translateY(0vh) translateX(110vw) scale(0.45);
+        }
+    }
+    .navbar-fixed-top.scrolled {
+        background-color: #fff !important;
+        transition: background-color 200ms linear;
+    }
+    .bg {
+        background-color: white;
+    }
     </style>
 </head>
 
@@ -1094,6 +1140,7 @@
     <div class="content">
         <div id="particles-js"></div>
         <div>
+
             <h1 style="text-align: center;color: white">- Our Vision -</h1>
             <hr style="background-color:white;width:50%">
 

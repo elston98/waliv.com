@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
@@ -73,19 +79,8 @@
         }
         
         footer {
-            width: 100%;
-            height: 50%;
             background: black;
-            position: relative;
-            bottom: 0px
-        }
-        
-        footer div {
-            background-color: var(--col-deepblue);
-            margin: -5px 0px 0px 0px;
-            padding: 0px;
-            color: #fff;
-            text-align: center;
+            color: white;
         }
         
         svg {
@@ -151,10 +146,6 @@
         }
         
         @media screen and (max-height: 890px) {
-            footer {
-                width: 100%;
-                height: 40%;
-            }
             #particles-js {
                 /* top: 10%; */
             }
@@ -163,12 +154,7 @@
             }
         }
         
-        @media screen and (max-width: 500px) {
-            footer {
-                width: 100%;
-                height: 15%;
-            }
-        }
+        @media screen and (max-width: 500px) {}
         
         @media screen and (max-width: 1440px) {}
         
@@ -349,7 +335,7 @@
         
         .content2 {
             width: 100%;
-            height: 60%;
+            height: 80%;
             background: black;
         }
         
@@ -407,8 +393,24 @@
         
         .swing2 {
             animation: swing2 ease-in-out 2.5s infinite alternate-reverse;
-            transform-origin: center -20px;
+            transform-origin: center -10px;
             float: right;
+        }
+        
+        .swing3 {
+            animation: swing3 ease-in-out 3s infinite alternate;
+            transform-origin: center;
+            width: 60%;
+            height: 20%;
+        }
+        
+        .swing3 img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+            opacity: 0.4;
+            height: 300px;
         }
         
         .swing img {
@@ -455,10 +457,19 @@
         
         @keyframes swing2 {
             0% {
-                transform: translate(10px, 10px);
+                transform: translate(10px, 20);
             }
             100% {
-                transform: translate(-10px, -10px);
+                transform: translate(-10px, -20px);
+            }
+        }
+        
+        @keyframes swing3 {
+            0% {
+                transform: translate(10px, 20px);
+            }
+            100% {
+                transform: translate(-10px, 0px);
             }
         }
         
@@ -1051,9 +1062,10 @@
 
     <div class="content">
         <div id="particles-js"></div>
+        <h1 style="text-align: center;color:white" class="ml3">About Us</h1>
 
-        <h1 style="text-align: center;color: white">About Us</h1>
-        <h4>
+        <!-- <h1 style="text-align: center;color: white">About Us</h1> -->
+        <h4 class="ml4">
 
             Waliv Global Services established in year 2011 has been providing Maritime Administration and Fleet Services to international shipping companies and ship management companies around the globe.
         </h4>
@@ -1062,6 +1074,9 @@
             <img src="/images/Squid.png">
         </div>
         <div class="swing2">
+            <img src="/images/Squid.png">
+        </div>
+        <div class="swing3">
             <img src="/images/Squid.png">
         </div>
 
@@ -1091,7 +1106,7 @@
             <div class="service-container-box">
 
                 <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150">
+                    <img src="/images/tech.png" width="150" height="150">
 
                     <h4 style="color:white;text-align:center;margin-top:60px ">Maritime Technical Administration</h4>
                 </div>
@@ -1099,14 +1114,14 @@
             </div>
             <div class="service-container-box">
                 <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150">
+                    <img src="/images/crew.png" width="150" height="150">
 
                     <h4 style="color:white;text-align:center;margin-top:60px ">Crew Account Administration</h4>
                 </div>
             </div>
             <div class="service-container-box">
                 <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150">
+                    <img src="/images/hsse.png" width="150" height="150">
 
                     <h4 style="color:white;text-align:center;margin-top:60px ">HSSE Administration</h4>
                 </div>
@@ -1114,7 +1129,7 @@
 
             <div class="service-container-box">
                 <div class="circle-service">
-                    <img src="/images/Technical.png" width="150 " height="150 ">
+                    <img src="/images/hr_management.png" width="150 " height="150 ">
 
                     <h4 style="color:white;text-align:center;margin-top:60px ">Human Resource Management</h4>
                 </div>
@@ -1131,23 +1146,178 @@
     </div>
 
 
-    </div>
-    <!-- <footer>
-        <h2>
-            Address:
-        </h2>
+    <!-- <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <img src="images/waliv.png" width="60%" height="15%">
+
+
+
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>G-101, Trinity Pride,Evershine City</span> Vasai(East)-401208, India</p>
+            </div><br>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p><span>+91 823 700 4217 </span><span>+91 932 000 4217</span></p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:admin@waliv.com">admin@waliv.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+            <p>Contact Us</p>
+
+            <form action="" method="post">
+
+
+                <input type="text" id="txtemail" name="txtemail" placeholder=" Email" required />
+                <textarea name="txtmsg" id="txtmsg" placeholder=" Message"></textarea>
+                <button>Send</button>
+
+            </form>
+
+
+
+
+        </div>
 
     </footer> -->
 
 
 
-    <!-- </section> -->
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
     <script src="/js/particles.js "></script>
     <script src="/js/app.js "></script>
+
+    <script>
+        function send_contact() {
+            var name = $('#txtname').val();
+            var contact = $("#txtcontact").val();
+            //var profile = $('#profile').val();//
+            var email = $('#txtemail').val();
+            var msg = $('#txtmsg').val();
+            //alert(opts);	
+            var dataString = "name=" + escape(name) + '&' + "contact=" + escape(contact) + '&' + "email=" + escape(email) + '&' + "msg=" + escape(msg);
+            //alert(dataString);	
+            // $('#loading_icon').html('<img src="assets/images/ajax-loader.gif" height="20" width="20" style="padding:5px 0px 0px 10px;">');
+            $.ajax({
+                type: "POST",
+                url: "send_cont.php", // Name of the php files
+                data: dataString,
+                success: function(html) {
+                    /*$("#data_ok").delay(2000).html(html);
+	    $("#loading_icon").html('');
+	    $("#data_ok").delay(2000).html('');*/
+
+                    setTimeout(function() {
+                        $('#data_ok').fadeIn(1000).html(html);
+                    });
+
+                    $("#loading_icon").html('');
+                    setTimeout(function() {
+                        $('#data_ok').fadeOut(1000);
+                    }, 5000);
+                },
+            });
+        }
+    </script>
+
+    <script>
+        // Wrap every letter in a span
+
+        $(window).one('scroll', function() {
+            var textWrapper = document.querySelector('.ml3');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({
+                    loop: false
+                })
+                .add({
+                    targets: '.ml3 .letter',
+                    translateX: [40, 0],
+                    translateZ: 0,
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 8000
+
+                })
+
+            var textWrapper = document.querySelector('.ml4');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({
+                    loop: false
+                })
+                .add({
+                    targets: '.ml4 .letter',
+                    translateX: [40, 0],
+                    translateZ: 0,
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 8000
+
+
+                })
+
+
+
+
+
+            // anime.timeline({
+            //         loop: false
+            //     })
+            //     .add({
+            //         targets: '.ml3 .letter',
+            //         opacity: [0, 1],
+            //         easing: "easeInOutQuad",
+            //         duration: 2250,
+            //         delay: function(el, i) {
+            //             return 150 * (i + 1)
+            //         }
+            //     }).add({
+            //         targets: '.ml3',
+            //         opacity: 1,
+            //         duration: 1000,
+            //         easing: "easeOutExpo",
+            //         delay: 1000
+            //     });
+
+            // var textWrapper = document.querySelector('.ml4');
+            // textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+
+            // anime.timeline({
+            //         loop: false
+            //     })
+            //     .add({
+            //         targets: '.ml4 .letter',
+            //         opacity: [0, 1],
+            //         easing: "easeInOutQuad",
+            //         duration: 2250,
+
+            //     }).add({
+            //         targets: '.ml4',
+            //         opacity: 1,
+            //         duration: 1000,
+            //         easing: "easeOutExpo",
+            //         delay: 1000
+            //     });
+        })
+    </script>
+
 
 
 
