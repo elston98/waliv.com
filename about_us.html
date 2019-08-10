@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,21 +22,23 @@
     <title>About</title>
 
     <style>
-     :root {
+         :root {
             --color_1: #eb3b5a;
             --color_2: #fa8231;
             --color_3: #8854d0;
             --color_4: #20bf6b;
         }
         
-        html {
-            scroll-behavior: smooth;
-        }
-        
         body {
             font-family: 'Calibri';
             overflow-x: hidden;
-            /* background-color: #32B0E3; */
+            scroll-behavior: smooth;
+            /* background-color: #32B0E3; 
+            */
+        }
+        
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9)
         }
         
         #particles-js canvas {
@@ -66,9 +74,87 @@
         #particles-js2 {
             width: 100%;
             height: 50%;
-            position: fixed;
+            position: absolute;
             /* top: 10%; */
             left: 0
+        }
+        
+        .header {
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/light.png'), url('/images/seawave.png');
+            background-color: rgba(255, 255, 255, 0.15);
+            background-blend-mode: soft-light;
+            background-repeat: no-repeat, no-repeat;
+            background-position: right top, cover;
+            background-size: cover;
+            animation: background-scroll 5s ease-in infinite;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes background-scroll {
+            0% {
+                background-position: 0px 0px, 0 0;
+            }
+            50% {
+                background-position: -20px 0px, 0 0;
+            }
+            100% {
+                background-position: 0 0, 0 0;
+            }
+        }
+        
+        .head-content {
+            width: 100%;
+            color: #fff;
+        }
+        
+        .header .head-content h1 {
+            padding-top: 250px;
+            padding-left: 100px;
+            font-size: 80px;
+            font-weight: bold;
+        }
+        
+        .header .head-content h4 {
+            padding-left: 100px;
+            padding-right: 300px;
+        }
+        
+        .main-content {
+            margin-top: 10%;
+            margin-left: -10px;
+            width: 100%;
+            height: 500px;
+        }
+        
+        .main-content div {
+            background: linear-gradient(to bottom, #c9e5fa 10%, #c9e5fa 90%);
+            display: inline-block;
+        }
+        
+        .top,
+        .bottom {
+            height: 55%;
+            width: 102%;
+            filter: blur(10px);
+        }
+        
+        .top {
+            border-top-left-radius: 200% 250%;
+            border-top-right-radius: 200% 200%;
+        }
+        
+        .content-text {
+            margin-top: 1.25%;
+            background: #c9e5fa;
+            width: 100%;
+            height: 50%;
+        }
+        
+        .navbar-nav {
+            font-weight: bold;
+            text-transform: uppercase;
         }
         
         a {
@@ -77,19 +163,8 @@
         }
         
         footer {
-            width: 100%;
-            height: 50%;
             background: black;
-            position: relative;
-            bottom: 0px
-        }
-        
-        footer div {
-            background-color: var(--col-deepblue);
-            margin: -5px 0px 0px 0px;
-            padding: 0px;
-            color: #fff;
-            text-align: center;
+            color: white;
         }
         
         svg {
@@ -155,10 +230,6 @@
         }
         
         @media screen and (max-height: 890px) {
-            footer {
-                width: 100%;
-                height: 40%;
-            }
             #particles-js {
                 /* top: 10%; */
             }
@@ -167,12 +238,7 @@
             }
         }
         
-        @media screen and (max-width: 500px) {
-            footer {
-                width: 100%;
-                height: 15%;
-            }
-        }
+        @media screen and (max-width: 500px) {}
         
         @media screen and (max-width: 1440px) {}
         
@@ -211,6 +277,10 @@
             border-radius: 50%;
             overflow: hidden;
             box-shadow: 10px 5px 5px rgb(151, 151, 151);
+        }
+        
+        .circle-service h4 {
+            display: none;
         }
         
         .circle-service {
@@ -268,12 +338,47 @@
         .circle-service:hover img {
             transition: all 0.65s;
             transform: rotateY(180deg);
-            margin-top: 55px;
         }
         
-        .circle-service:hover {
-            width: 280px;
-            height: 280px;
+        .circle-service:hover h4 {
+            display: block;
+            -webkit-animation: flip-in-hor-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: flip-in-hor-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        /* ----------------------------------------------
+ * Generated by Animista on 2019-8-6 17:21:14
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+        /**
+ * ----------------------------------------
+ * animation flip-in-hor-top
+ * ----------------------------------------
+ */
+        
+        @-webkit-keyframes flip-in-hor-top {
+            0% {
+                -webkit-transform: rotateX(-80deg);
+                transform: rotateX(-80deg);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: rotateX(0);
+                transform: rotateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes flip-in-hor-top {
+            0% {
+                -webkit-transform: rotateX(-80deg);
+                transform: rotateX(-80deg);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: rotateX(0);
+                transform: rotateX(0);
+                opacity: 1;
+            }
         }
         
         @-webkit-keyframes ripple {
@@ -314,17 +419,17 @@
         }
         
         .container {
-            margin-top: 10%;
+            margin-top: 25%;
             width: 100%;
         }
         
         .content {
             width: 100%;
-            height: 60%;
+            height: 65%;
             z-index: 2;
-            margin-top: 5%;
+            margin-top: 8.5%;
             font-size: 10px;
-            background: linear-gradient(to bottom, #294FA4 25%, black 90%)
+            background: linear-gradient(to bottom, #294FA4 10%, black 90%);
         }
         
         @keyframes animate {
@@ -359,44 +464,49 @@
         
         .content2 {
             width: 100%;
-            height: 80%;
+            height: auto;
             background: black;
-        }
-        
-        .content2 h1 {
-            padding-top: 50px;
-        }
-        
-        .content2 h4,
-        h5 {
-            padding-left: 50px;
-        }
-        
-        .content2 .cont1 {
-            width: 100%;
-            height: 40%;
-        }
-        
-        .content .cont2 {
-            width: 100%;
-            height: 40%;
         }
         
         .content2 .service-container {
             display: flex;
             justify-content: space-around;
+            position: relative;
+            background: black;
             /* align-items: flex-start;
             align-items: flex-end;
             align-items: center; */
         }
         
         .content2 .service-container div {
-            /* border: 1px solid white; */
             padding: 10px;
+            text-align: center;
+            border: 1px solid white;
+            box-shadow: 5px 5px 10px #294FA4;
+        }
+        
+        .service-container i {
+            color: #fff;
+            font-size: 100px;
+        }
+        
+        .service-container div h4,
+        .service-container div h5 {
+            margin-top: 20px;
+            color: #fff;
         }
         
         .service-container-box {
-            flex-basis: 20%;
+            flex-basis: 45%;
+        }
+        
+        .service-container .service-container-box:hover {
+            background: linear-gradient(to bottom, #294FA4 10%, black 90%);
+        }
+        
+        .service-container .service-container-box:hover i {
+            transition: all 0.3s ease-in;
+            transform: rotate(180deg)
         }
         
         @media screen and (max-width:850px) {
@@ -436,8 +546,23 @@
         
         .swing2 {
             animation: swing2 ease-in-out 2.5s infinite alternate-reverse;
-            transform-origin: center -20px;
+            transform-origin: center -10px;
             float: right;
+        }
+        
+        .swing3 {
+            animation: swing3 ease-in-out 3s infinite alternate;
+            transform-origin: center;
+            width: 60%;
+            height: 20%;
+        }
+        
+        .swing3 img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+            opacity: 0.1;
         }
         
         .swing img {
@@ -448,6 +573,7 @@
         .swing2 img {
             display: block;
             height: 300px;
+            opacity: 1;
         }
         
         .swing:after {
@@ -484,10 +610,19 @@
         
         @keyframes swing2 {
             0% {
-                transform: translate(10px, 10px);
+                transform: translate(10px, 20);
             }
             100% {
-                transform: translate(-10px, -10px);
+                transform: translate(-10px, -20px);
+            }
+        }
+        
+        @keyframes swing3 {
+            0% {
+                transform: translate(10px, 20px);
+            }
+            100% {
+                transform: translate(-10px, 0px);
             }
         }
         
@@ -515,41 +650,6 @@
             }
             100% {
                 background-position: 0 0;
-            }
-        }
-        /* .w {
-            display: inline-block;
-            -webkit-animation: wave 2s infinite;
-        } */
-        /* original css from shillingburg.co */
-        
-        @-webkit-keyframes wave {
-            0% {
-                -webkit-transform: translate(2px, -2px);
-                text-shadow: -5px 5px 0px rgba(22, 39, 255, 0.2);
-            }
-            50% {
-                -webkit-transform: translate(0px, 2px);
-                text-shadow: 0px 0px 0px rgba(22, 39, 73, 0.2);
-            }
-        }
-        
-        .anim {
-            animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
-        }
-        
-        @keyframes tracking-in-expand-fwd-bottom {
-            0% {
-                letter-spacing: -0.5em;
-                transform: translateZ(-700px) translateY(500px);
-                opacity: 0.2;
-            }
-            40% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateZ(0) translateY(0);
-                opacity: 1;
             }
         }
         /*         
@@ -729,341 +829,310 @@
                 height: 150px;
             }
         } */
-    }
-    @media screen and (max-height:825px) {
-        .circle {
-            margin-top: 50%;
+        
+        @media screen and (max-height:825px) {
+            .circle {
+                margin-top: 50%;
+            }
+            .main svg {
+                margin-top: 45%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
         }
         
-        .main svg {
-            margin-top: 45%;
+        @media screen and (max-height:815px) {
+            .circle {
+                margin-top: 60%;
+                width: 200px;
+                height: 200px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
         }
         
-        .content {
-            width: 100%;
+        @media screen and (max-height:770px) {
+            .circle {
+                margin-top: -10%;
+            }
+            .main svg {
+                margin-top: -5%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 300px;
+            }
+            .swing2 img {
+                height: 200px;
+            }
         }
         
-        .content2 {
-            height: 100%;
+        @media screen and (max-height:740px) {
+            .circle {
+                margin-top: 50%;
+            }
+            .main svg {
+                margin-top: 25%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
         }
         
-        .content h4 {
-            margin-left: 10px;
-            margin-right: 10px;
+        @media screen and (max-height: 636px) {
+            .circle {
+                margin-top: -10%;
+            }
+            .main svg {
+                margin-top: -10%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
         }
         
-        .swing img {
-            height: 100px;
+        @media screen and (max-height:570px) {
+            .circle {
+                margin-top: 50%;
+                width: 150px;
+                height: 150px;
+            }
+            .main svg {
+                margin-top: 20%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 100px;
+            }
+            .content2 h1 {
+                font-size: 30px;
+            }
         }
         
-        .swing2 img {
-            height: 150px;
-        }
-    }
-    @media screen and (max-height:815px) {
-        .circle {
-            margin-top: 60%;
-            width: 200px;
-            height: 200px;
-        }
-        
-        .main svg {
-            margin-top: 50%;
+        .bird {
+            background-image: url('/images/bird-cells.svg');
+            background-size: auto 100%;
+            width: 88px;
+            z-index: -1;
+            height: 125px;
+            will-change: background-position;
+            animation-name: fly-cycle;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
         }
         
-        .content {
-            width: 100%;
+        .second-bird {
+            background-image: url('/images/bird-cells2.svg');
+            background-size: auto 100%;
+            width: 88px;
+            z-index: -1;
+            height: 125px;
+            will-change: background-position;
+            animation-name: fly-cycle;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
         }
         
-        .content2 {
-            height: 100%;
+        .bird--one {
+            animation-duration: 1s;
+            animation-delay: -0.5s;
         }
         
-        .content h4 {
-            margin-left: 10px;
-            margin-right: 10px;
+        .bird--two {
+            animation-duration: 0.9s;
+            animation-delay: -0.75s;
         }
         
-        .swing img {
-            height: 100px;
+        .bird--three {
+            animation-duration: 1.25s;
+            animation-delay: -0.25s;
         }
         
-        .swing2 img {
-            height: 150px;
-        }
-    }
-    @media screen and (max-height:770px) {
-        .circle {
-            margin-top: -10%;
+        .bird--four {
+            animation-duration: 1.1s;
+            animation-delay: -0.5s;
         }
         
-        .main svg {
-            margin-top: -5%;
+        .bird-container {
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            transform: scale(0) translateX(-10vw);
+            will-change: transform;
+            animation-name: fly-right-one;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
         
-        .content {
-            width: 100%;
+        .bird-container--one {
+            animation-duration: 15s;
+            animation-delay: 0;
         }
         
-        .content2 {
-            height: 100%;
+        .bird-container--two {
+            animation-duration: 15s;
+            animation-delay: 1s;
         }
         
-        .content h4 {
-            margin-left: 10px;
-            margin-right: 10px;
+        .bird-container--three {
+            animation-duration: 14.6s;
+            animation-delay: 9.5s;
         }
         
-        .swing img {
-            height: 100px;
+        .bird-container--four {
+            animation-duration: 14.6s;
+            animation-delay: 10.25s;
         }
         
-        .swing2 img {
-            height: 150px;
-        }
-    }
-    @media screen and (max-height:740px) {
-        .circle {
-            margin-top: 50%;
+        @keyframes fly-cycle {
+            100% {
+                background-position: -900px 0;
+            }
         }
         
-        .main svg {
-            margin-top: 25%;
+        @keyframes fly-right-one {
+            0% {
+                transform: scale(0.3) translateX(-10vw);
+            }
+            10% {
+                transform: translateY(2vh) translateX(10vw) scale(0.4);
+            }
+            20% {
+                transform: translateY(0vh) translateX(30vw) scale(0.5);
+            }
+            30% {
+                transform: translateY(4vh) translateX(50vw) scale(0.6);
+            }
+            40% {
+                transform: translateY(2vh) translateX(70vw) scale(0.6);
+            }
+            50% {
+                transform: translateY(0vh) translateX(90vw) scale(0.6);
+            }
+            60% {
+                transform: translateY(0vh) translateX(110vw) scale(0.6);
+            }
+            100% {
+                transform: translateY(0vh) translateX(110vw) scale(0.6);
+            }
         }
         
-        .content {
-            width: 100%;
+        @keyframes fly-right-two {
+            0% {
+                transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+            }
+            10% {
+                transform: translateY(0vh) translateX(10vw) scale(0.4);
+            }
+            20% {
+                transform: translateY(-4vh) translateX(30vw) scale(0.6);
+            }
+            30% {
+                transform: translateY(1vh) translateX(50vw) scale(0.45);
+            }
+            40% {
+                transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+            }
+            50% {
+                transform: translateY(0vh) translateX(90vw) scale(0.45);
+            }
+            51% {
+                transform: translateY(0vh) translateX(110vw) scale(0.45);
+            }
+            100% {
+                transform: translateY(0vh) translateX(110vw) scale(0.45);
+            }
         }
-        
-        .content2 {
-            height: 100%;
-        }
-        
-        .content h4 {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        
-        .swing img {
-            height: 100px;
-        }
-        
-        .swing2 img {
-            height: 150px;
-        }
-    }
-    @media screen and (max-height: 636px) {
-        .main svg {
-            margin-top: 5%;
-        }
-        
-        .content {
-            width: 100%;
-        }
-        
-        .content2 {
-            height: 100%;
-        }
-        
-        .content h4 {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        
-        .swing img {
-            height: 100px;
-        }
-        
-        .swing2 img {
-            height: 150px;
-        }
-    }
-    @media screen and (max-height:570px) {
-        .circle {
-            margin-top: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        
-        .main svg {
-            margin-top: 20%;
-        }
-        
-        .content {
-            width: 100%;
-        }
-        
-        .content2 {
-            height: 100%;
-        }
-        
-        .content h4 {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        
-        .swing img {
-            height: 100px;
-        }
-        
-        .swing2 img {
-            height: 150px;
-        }
-    }
-    .bird {
-        background-image: url('/images/bird-cells.svg');
-        background-size: auto 100%;
-        width: 88px;
-        z-index: -1;
-        height: 125px;
-        will-change: background-position;
-        animation-name: fly-cycle;
-        animation-timing-function: steps(10);
-        animation-iteration-count: infinite;
-    }
-    .second-bird {
-        background-image: url('/images/bird-cells2.svg');
-        background-size: auto 100%;
-        width: 88px;
-        z-index: -1;
-        height: 125px;
-        will-change: background-position;
-        animation-name: fly-cycle;
-        animation-timing-function: steps(10);
-        animation-iteration-count: infinite;
-    }
-    .bird--one {
-        animation-duration: 1s;
-        animation-delay: -0.5s;
-    }
-    .bird--two {
-        animation-duration: 0.9s;
-        animation-delay: -0.75s;
-    }
-    .bird--three {
-        animation-duration: 1.25s;
-        animation-delay: -0.25s;
-    }
-    .bird--four {
-        animation-duration: 1.1s;
-        animation-delay: -0.5s;
-    }
-    .bird-container {
-        position: absolute;
-        top: 20%;
-        left: -10%;
-        transform: scale(0) translateX(-10vw);
-        will-change: transform;
-        animation-name: fly-right-one;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    .bird-container--one {
-        animation-duration: 15s;
-        animation-delay: 0;
-    }
-    .bird-container--two {
-        animation-duration: 15s;
-        animation-delay: 1s;
-    }
-    .bird-container--three {
-        animation-duration: 14.6s;
-        animation-delay: 9.5s;
-    }
-    .bird-container--four {
-        animation-duration: 14.6s;
-        animation-delay: 10.25s;
-    }
-    @keyframes fly-cycle {
-        100% {
-            background-position: -900px 0;
-        }
-    }
-    @keyframes fly-right-one {
-        0% {
-            transform: scale(0.3) translateX(-10vw);
-        }
-        
-        10% {
-            transform: translateY(2vh) translateX(10vw) scale(0.4);
-        }
-        
-        20% {
-            transform: translateY(0vh) translateX(30vw) scale(0.5);
-        }
-        
-        30% {
-            transform: translateY(4vh) translateX(50vw) scale(0.6);
-        }
-        
-        40% {
-            transform: translateY(2vh) translateX(70vw) scale(0.6);
-        }
-        
-        50% {
-            transform: translateY(0vh) translateX(90vw) scale(0.6);
-        }
-        
-        60% {
-            transform: translateY(0vh) translateX(110vw) scale(0.6);
-        }
-        
-        100% {
-            transform: translateY(0vh) translateX(110vw) scale(0.6);
-        }
-    }
-    @keyframes fly-right-two {
-        0% {
-            transform: translateY(-2vh) translateX(-10vw) scale(0.5);
-        }
-        
-        10% {
-            transform: translateY(0vh) translateX(10vw) scale(0.4);
-        }
-        
-        20% {
-            transform: translateY(-4vh) translateX(30vw) scale(0.6);
-        }
-        
-        30% {
-            transform: translateY(1vh) translateX(50vw) scale(0.45);
-        }
-        
-        40% {
-            transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
-        }
-        
-        50% {
-            transform: translateY(0vh) translateX(90vw) scale(0.45);
-        }
-        
-        51% {
-            transform: translateY(0vh) translateX(110vw) scale(0.45);
-        }
-        
-        100% {
-            transform: translateY(0vh) translateX(110vw) scale(0.45);
-        }
-    }
-    .navbar-fixed-top.scrolled {
-        background-color: #fff !important;
-        transition: background-color 200ms linear;
-    }
-    .bg {
-        background-color: white;
-    }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light ">
         <a href="/home.html" class="navbar-brand"><img src="/images/waliv.png" width="180"></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-right: 150px;z-index: 10">
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-right: 50px;z-index: 99">
 
             <div class="navbar-nav ml-auto">
                 <a href="/home.html" style="margin-right: 20px;color: #234786" class="nav-item nav-link active">Home</a>
@@ -1071,8 +1140,8 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" style="margin-right: 20px;color: #234786" data-toggle="dropdown">Company</a>
                     <div class="dropdown-menu">
-                        <a href="#vision_mission" class="dropdown-item">Vission and Mission</a>
-                        <a href="#about_us" class="dropdown-item">About Us</a>
+                        <a href="/about_us.html#about_us" class="dropdown-item">About Us</a>
+                        <a href="/about_us.html#vision_mission" class="dropdown-item">Vision & Mission</a>
 
                     </div>
                 </div>
@@ -1093,13 +1162,35 @@
         </div>
     </nav>
 
+    <div class="header">
+        <div class="head-content">
+            <h1>WHO WE ARE?</h1>
+            <h4>Waliv Global Services established in year 2011 has been providing Maritime Administration and Fleet Services to international shipping companies and ship management companies around the globe. The concept of our services is unique, we are
+                committed to provide complete freedom to shipping companies and ship management companies from their day to day admin work. We provide bespoke services to suit your company's requirements.
+            </h4>
 
-    <div class="main" id="vision_mission">
+        </div>
 
-        <div class="container">
-            <!-- <h1 style="text-align: center; color: #294FA4">Your Tasks, Our Services.</h1> -->
+        <div class="main-content">
 
-            <div class="bird-container bird-container--one">
+            <div class="top">
+            </div>
+
+        </div>
+    </div>
+    <div class="content-text">
+        <h1 style="color:#294FA4;text-align: center;text-transform: uppercase;padding-top:10px">Some Text</h1>
+
+        
+    </div>
+
+    <!-- 
+    <div class="main">
+
+        <div class="container"> -->
+    <!-- <h1 style="text-align: center; color: #294FA4">Your Tasks, Our Services.</h1> -->
+
+    <!-- <div class="bird-container bird-container--one">
 
                 <div class="bird bird--one"></div>
             </div>
@@ -1117,6 +1208,16 @@
             </div>
 
 
+
+            <div class="circle">
+                <figure>
+
+                </figure>
+                <figure></figure>
+                <figure></figure>
+            </div>
+
+
         </div>
         <svg viewBox="0 0 120 28">
                 <defs>
@@ -1128,154 +1229,282 @@
                 <use id="wave4" class="wave" xlink:href="#wave" x="0" y="1"></use>
                 
               
-        </svg>
+        </svg> -->
 
 
 
-        <!-- 
+    <!-- 
         <div id="particles-js"></div>
-        <div id="particles-js2"></div> -->
+        <div id="particles-js2"></div> 
     </div>
 
-    <div class="content">
+    <!-- <div class="content">
         <div id="particles-js"></div>
-        <div>
+        <h1 style="text-align: center;color:white" class="ml3">- Who We Are -</h1>
 
-            <h1 style="text-align: center;color: white">- Our Vision -</h1>
-            <hr style="background-color:white;width:50%">
+        <!-- <h1 style="text-align: center;color: white">About Us</h1> 
+        <h4 class="ml4">
 
-            <h4>
-                To Provide high quality services fulfilling the customer's needs to their extreme satisfaction.
-            </h4>
+            Waliv Global Services established in year 2011 has been providing Maritime Administration and Fleet Services to international shipping companies and ship management companies around the globe.
+        </h4>
 
-
-
-            <br><br>
-
-            <h1 style="text-align: center;color:white">- Our Mission -</h1>
-            <hr style="background-color: white;width:50%">
-            <h4>
-                Establish highest standards of services and strive for excellence.
-            </h4>
-        </div>
+        <br><br>
 
 
+
+        <!-- <h1 style="text-align: center;color: white">- What We Do -</h1>
+
+        <h4>We are currently providing administration and fleet services to major oil/gas companies, handling over 50 ships and helping them reduce their admin burden both onshore and offshore.
+        </h4> 
         <div class="swing">
             <img src="/images/Squid.png">
         </div>
         <div class="swing2">
             <img src="/images/Squid.png">
         </div>
+        <div class="swing3">
+            <img src="/images/Squid.png">
+        </div>
 
     </div>
 
-
-    <div class="content2" id="about_us">
-
-        <h1 style="text-align:center;color:white">About Us</h1>
-        <div class="cont1">
-            <!-- <section class="services"> -->
-
-            <h4 style="color:white">Who We Are?</h4><br>
-            <h5 style="color:white">Waliv Global Services established in year 2011 has been providing Maritime Administration and Fleet Services to international shipping companies and ship management companies around the globe. The concept of our services is unique, we are
-                committed to provide complete freedom to shipping companies and ship management companies from their day to day admin work. We provide bespoke services to suit your company's requirements.
-            </h5>
-        </div>
-        <div class="cont2">
-
-            <h4 style="color:white">What we Do?</h4>
-            <h5 style="color: white">We are currently providing administration and fleet services to oil/gas major companies, handling over 50 ships and helping them reduce their admin burden both onshore and offshore.</h5>
-        </div>
+    <div class="content2">
+ -->
 
 
-        <!-- <div class="col-lg-3 col-md-6">
-    
-                <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150" style="margin-top:30px;margin-left:30px">
-    
-                    <h4 style="color:white;text-align:center;margin-top:60px ">Technical Management</h4>
-                </div>
-                <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150" style="margin-top:30px;margin-left:30px">
-    
-                    <h4 style="color:white;text-align:center;margin-top:60px ">Technical Management</h4>
-                </div>
-    
-            </div> -->
+    <!-- < <section class="services"> 
+    <h1 style="text-align:center;color:white">OUR SERVICES</h1> -->
 
-        <!-- <div class="service-container">
-            <div class="service-container-box">
+    <!-- <div class="col-lg-3 col-md-6">
 
-                <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150">
+            <div class="circle-service">
+                <img src="/images/Technical.png" width="150" height="150" style="margin-top:30px;margin-left:30px">
 
-                    <h4 style="color:white;text-align:center;margin-top:60px ">Maritime Technical Administration</h4>
-                </div>
-
+                <h4 style="color:white;text-align:center;margin-top:60px ">Technical Management</h4>
             </div>
-            <div class="service-container-box">
-                <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150">
+            <div class="circle-service">
+                <img src="/images/Technical.png" width="150" height="150" style="margin-top:30px;margin-left:30px">
 
-                    <h4 style="color:white;text-align:center;margin-top:60px ">Crew Account Administration</h4>
-                </div>
-            </div>
-            <div class="service-container-box">
-                <div class="circle-service">
-                    <img src="/images/Technical.png" width="150" height="150">
-
-                    <h4 style="color:white;text-align:center;margin-top:60px ">HSSE Administration</h4>
-                </div>
-            </div>
-
-            <div class="service-container-box">
-                <div class="circle-service">
-                    <img src="/images/Technical.png" width="150 " height="150 ">
-
-                    <h4 style="color:white;text-align:center;margin-top:60px ">Human Resource Management</h4>
-                </div>
-            </div>
-            <div class="service-container-box ">
-                <div class="circle-service ">
-                    <img src="/images/Technical.png " width="150 " height="150 ">
-
-                    <h4 style="color:white;text-align:center;margin-top:60px ">Warehousing</h4>
-                </div>
+                <h4 style="color:white;text-align:center;margin-top:60px ">Technical Management</h4>
             </div>
 
         </div> -->
+
+    <!-- <div class="service-container ml5">
+            <div class="service-container-box">
+
+                <!-- <div class="circle-service"> 
+
+    <i class="fa fa-eye"></i>
+    <h4 style="color:white;text-align:center ">- Our Vision -</h4>
+    <h5>To provide high quality and cost-effective services fulfilling the customer's needs to their extreme satisfaction.</h5>
+    <!-- </div> 
+
+    </div>
+    <div class="service-container-box">
+        <!-- <div class="circle-service"> 
+        <i class="fa fa-bullseye"></i>
+        <h4 style="color:white;text-align:center">- Our Mission -</h4>
+        <h5>Establish highest standards of services and strive for excellence.</h5>
+        <!-- </div> 
     </div>
 
 
+
+
+
     </div>
-    <!-- <footer>
-        <h2>
-            Address:
-        </h2>
-
-    </footer> -->
+    -->
 
 
+    <!-- <footer class="footer-distributed">
 
-    <!-- </section> -->
+        <div class="footer-left">
+
+            <img src="images/waliv.png" width="60%" height="15%">
 
 
 
-    <!-- <script>
-        $(function() {
-            $(document).scroll(function() {
-                var $nav = $(".fixed-top");
-                $nav.addClass('bg');
+        </div>
 
-            });
-        });
-    </script> -->
+        <div class="footer-center">
 
-    <script>
-    </script>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>G-101, Trinity Pride,Evershine City</span> Vasai(East)-401208, India</p>
+            </div><br>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p><span>+91 823 700 4217 </span><span>+91 932 000 4217</span></p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:admin@waliv.com">admin@waliv.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+            <p>Contact Us</p>
+
+            <form action="" method="post">
+
+
+                <input type="text" id="txtemail" name="txtemail" placeholder=" Email" required />
+                <textarea name="txtmsg" id="txtmsg" placeholder=" Message"></textarea>
+                <button>Send</button>
+
+            </form>
+
+
+
+
+        </div>
+
+        </footer>
+
+        -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 
     <script src="/js/particles.js "></script>
     <script src="/js/app.js "></script>
+    <!-- 
+    <script>
+        function send_contact() {
+            var name = $('#txtname').val();
+            var contact = $("#txtcontact").val();
+            //var profile = $('#profile').val();//
+            var email = $('#txtemail').val();
+            var msg = $('#txtmsg').val();
+            //alert(opts);	
+            var dataString = "name=" + escape(name) + '&' + "contact=" + escape(contact) + '&' + "email=" + escape(email) + '&' + "msg=" + escape(msg);
+            //alert(dataString);	
+            // $('#loading_icon').html('<img src="assets/images/ajax-loader.gif" height="20" width="20" style="padding:5px 0px 0px 10px;">');
+            $.ajax({
+                type: "POST",
+                url: "send_cont.php", // Name of the php files
+                data: dataString,
+                success: function(html) {
+                    /*$("#data_ok").delay(2000).html(html);
+	    $("#loading_icon").html('');
+	    $("#data_ok").delay(2000).html('');*/
+
+                    setTimeout(function() {
+                        $('#data_ok').fadeIn(1000).html(html);
+                    });
+
+                    $("#loading_icon").html('');
+                    setTimeout(function() {
+                        $('#data_ok').fadeOut(1000);
+                    }, 5000);
+                },
+            });
+        }
+    </script> -->
+
+    <script>
+        // Wrap every letter in a span
+
+        $(window).one('scroll', function() {
+            var textWrapper = document.querySelector('.ml3');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({
+                    loop: false
+                })
+                .add({
+                    targets: '.ml3 .letter',
+                    translateX: [40, 0],
+                    translateZ: 0,
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 8000
+
+                })
+
+            var textWrapper = document.querySelector('.ml4');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({
+                    loop: false
+                })
+                .add({
+                    targets: '.ml4 .letter',
+                    translateX: [40, 0],
+                    translateZ: 0,
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 8000
+
+
+                })
+
+            var textWrapper = document.querySelector('.ml5');
+
+
+            anime.timeline({
+                    loop: false
+                })
+                .add({
+                    targets: '.ml5 .letter',
+                    translateX: [40, 0],
+                    translateZ: 0,
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 8000
+
+
+                })
+
+
+
+
+
+            // anime.timeline({
+            //         loop: false
+            //     })
+            //     .add({
+            //         targets: '.ml3 .letter',
+            //         opacity: [0, 1],
+            //         easing: "easeInOutQuad",
+            //         duration: 2250,
+            //         delay: function(el, i) {
+            //             return 150 * (i + 1)
+            //         }
+            //     }).add({
+            //         targets: '.ml3',
+            //         opacity: 1,
+            //         duration: 1000,
+            //         easing: "easeOutExpo",
+            //         delay: 1000
+            //     });
+
+            // var textWrapper = document.querySelector('.ml4');
+            // textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+
+            // anime.timeline({
+            //         loop: false
+            //     })
+            //     .add({
+            //         targets: '.ml4 .letter',
+            //         opacity: [0, 1],
+            //         easing: "easeInOutQuad",
+            //         duration: 2250,
+
+            //     }).add({
+            //         targets: '.ml4',
+            //         opacity: 1,
+            //         duration: 1000,
+            //         easing: "easeOutExpo",
+            //         delay: 1000
+            //     });
+        })
+    </script>
 
 
 

@@ -1,0 +1,329 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login-style/style.css" />
+
+    <style>
+        body {
+            font-family: 'Calibri';
+            overflow: hidden;
+            /* background-color: #32B0E3; */
+        }
+        
+        #particles-js canvas {
+            display: block;
+            vertical-align: bottom;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+            transition: opacity .8s ease, transform 1.4s ease
+        }
+        
+        #particles-js {
+            width: 100%;
+            height: 80%;
+            position: fixed;
+            z-index: -10;
+            top: 0;
+            left: 0
+        }
+        
+        #particles-js2 canvas {
+            display: block;
+            vertical-align: bottom;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+            transition: opacity .8s ease, transform 1.4s ease
+        }
+        
+        #particles-js2 {
+            width: 100%;
+            height: 80%;
+            position: fixed;
+            z-index: -10;
+            top: 0;
+            left: 0
+        }
+        
+        .fullscreen-bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            vertical-align: bottom;
+            overflow: hidden;
+            z-index: -100;
+        }
+        
+        .fullscreen-bg__video {
+            top: 0;
+            left: 0;
+            vertical-align: bottom;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+            overflow: hidden;
+        }
+        
+        @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+        body {
+            font-family: Lato, sans-serif;
+            --col-deepblue: #32B0E3;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        footer {
+            width: 100vw;
+            position: fixed;
+            bottom: 0px
+        }
+        
+        footer div {
+            background-color: var(--col-deepblue);
+            margin: -5px 0px 0px 0px;
+            padding: 0px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        svg {
+            width: 100%;
+            overflow: visible;
+        }
+        
+        .wave {
+            animation: wave 3s linear;
+            animation-iteration-count: infinite;
+            fill: #32B0E3;
+        }
+        
+        .drop {
+            fill: var(--col-deepblue);
+            animation: drop 3.2s linear infinite normal;
+            stroke: var(--col-deepblue);
+            stroke-width: 0.5;
+            transform: translateY(25px);
+            transform-box: fill-box;
+            transform-origin: 50% 100%;
+        }
+        
+        #wave2 {
+            animation-duration: 5s;
+            animation-direction: reverse;
+            opacity: .6;
+            fill: #59666F;
+        }
+        
+        #wave3 {
+            animation-duration: 7s;
+            fill: #294FA4;
+        }
+        
+        #wave4 {
+            animation-duration: 9s;
+            fill: #294FA4;
+        }
+        
+        @keyframes drop {
+            0% {
+                transform: translateY(25px);
+            }
+            30% {
+                transform: translateY(-10px) scale(.1);
+            }
+            30.001% {
+                transform: translateY(25px) scale(1);
+            }
+            70% {
+                transform: translateY(25px);
+            }
+            100% {
+                transform: translateY(-10px) scale(.1);
+            }
+        }
+        
+        @keyframes wave {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        
+        @media screen and (max-height: 890px) {
+            footer {
+                width: 100%;
+                height: 30%;
+            }
+        }
+        
+        @media screen and (max-width: 1440px) {}
+        
+        @media screen and (max-width:450px) {}
+        
+        .lds-ring {
+            display: none;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            padding-bottom: 5px;
+        }
+        
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            margin-left: 50%;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 6px solid #fff;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #fff transparent transparent transparent;
+        }
+        
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+        
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+        
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+        
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media screen and (min-height: 700px) {
+            .main-div {
+                margin-top: 150px;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <!-- <div class="fullscreen-bg">
+        <video loop muted autoplay class="fullscreen-bg__video">
+                    <source src="images/Wave.mp4 "type=" video/mp4">
+                   
+                </video>
+    </div> -->
+    <div id="particles-js"></div>
+    <div id="particles-js2"></div>
+
+
+    <div id="login_div" class="main-div">
+        <h3 style="text-align: center"><img src="images/waliv.png" width="200px"></h3>
+        <form action="javascript:;" onsubmit="login()">
+            <input type="email" placeholder="Email..." id="email_field" />
+            <input type="password" placeholder="Password..." id="password_field" />
+
+
+
+            <button type="submit">LOGIN
+                    <div id="lds-ring" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </button>
+
+        </form>
+    </div>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+        <h3></h3>
+        <p id="user_para"></p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+
+    </div>
+
+    <footer>
+        <svg viewBox="0 0 120 28">
+          <defs>
+            <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+          </defs> 
+      
+          <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-1"></use>
+          <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+          <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1"></use>
+        </svg>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC4fi9IhjP4ipoKghVCO0U99fWIOyf1l_A",
+
+            authDomain: "ship-service.firebaseapp.com",
+            databaseURL: "https://ship-service.firebaseio.com",
+            projectId: "ship-service",
+            storageBucket: "ship-service.appspot.com",
+            messagingSenderId: "633265655752",
+            appId: "1:633265655752:web:e084545a3cd944a6"
+
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- <script>
+        function login() {
+
+            var userEmail = document.getElementById("email_field").value;
+            var userPass = document.getElementById("password_field").value;
+
+
+            firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+
+                window.alert("Error : " + errorMessage);
+
+                // ...
+            });
+
+        }
+    </script> -->
+    <script src="/js/index.js"></script>
+    <script src="/js/particles2.js"></script>
+    <script src="/js/particles.js"></script>
+
+    <script src="/js/app.js"></script>
+
+
+</body>
+
+</html>

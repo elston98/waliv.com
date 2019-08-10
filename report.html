@@ -1,0 +1,1418 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="/css/login-style/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Home</title>
+
+    <style>
+         :root {
+            --color_1: #eb3b5a;
+            --color_2: #fa8231;
+            --color_3: #8854d0;
+            --color_4: #20bf6b;
+        }
+        
+        body {
+            font-family: 'Calibri';
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            /* background-color: #32B0E3; 
+            */
+        }
+        
+        .navbar-nav {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        #particles-js canvas {
+            display: block;
+            vertical-align: bottom;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+            transition: opacity .8s ease, transform 1.4s ease
+        }
+        
+        #particles-js {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            /* top: 10%; */
+            left: 0
+        }
+        
+        #particles-js2 canvas {
+            display: block;
+            vertical-align: bottom;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+            transition: opacity .8s ease, transform 1.4s ease
+        }
+        
+        #particles-js2 {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            /* top: 10%; */
+            left: 0
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        footer {
+            background: black;
+            color: white;
+        }
+        
+        svg {
+            width: 100%;
+            overflow: visible;
+        }
+        
+        .wave {
+            animation: wave 3s linear;
+            animation-iteration-count: infinite;
+            fill: #32B0E3;
+        }
+        
+        .drop {
+            fill: var(--col-deepblue);
+            animation: drop 3.2s linear infinite normal;
+            stroke: var(--col-deepblue);
+            stroke-width: 0.5;
+            transform: translateY(25px);
+            transform-box: fill-box;
+            transform-origin: 50% 100%;
+        }
+        
+        #wave2 {
+            animation-duration: 5s;
+            animation-direction: reverse;
+            opacity: .6;
+            fill: #59666F;
+        }
+        
+        #wave3 {
+            animation-duration: 7s;
+            fill: #294FA4;
+        }
+        
+        #wave4 {
+            animation-duration: 9s;
+            fill: #294FA4;
+        }
+        
+        @keyframes drop {
+            0% {
+                transform: translateY(25px);
+            }
+            30% {
+                transform: translateY(-10px) scale(.1);
+            }
+            30.001% {
+                transform: translateY(25px) scale(1);
+            }
+            70% {
+                transform: translateY(25px);
+            }
+            100% {
+                transform: translateY(-10px) scale(.1);
+            }
+        }
+        
+        @keyframes wave {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        
+        @media screen and (max-height: 890px) {
+            #particles-js {
+                /* top: 10%; */
+            }
+            #particles-js2 {
+                /* top: 10%; */
+            }
+        }
+        
+        @media screen and (max-width: 500px) {}
+        
+        @media screen and (max-width: 1440px) {}
+        
+        @media screen and (max-width:450px) {}
+        
+        @media screen and (min-height: 700px) {
+            .main-div {
+                margin-top: 150px;
+            }
+        }
+        /* body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Calibri';
+            overflow-x: hidden;
+        }*/
+        
+        a:hover {
+            font-weight: bold;
+        }
+        
+        a {
+            font-size: 20px;
+        }
+        
+        .circle {
+            position: relative;
+            left: 50%;
+            margin-top: 150px;
+            transform: translate(-50%, -50%);
+            width: 225px;
+            height: 225px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
+            border: solid 1px grey;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 10px 5px 5px rgb(151, 151, 151);
+        }
+        
+        .circle-service h4 {
+            display: none;
+        }
+        
+        .circle-service {
+            position: relative;
+            left: 50%;
+            margin-top: 150px;
+            transform: translate(-50%, -50%);
+            width: 225px;
+            background: #294FA4;
+            height: 225px;
+            border-radius: 50%;
+            /* animation: ripple 0.7s linear infinite; */
+            -webkit-transition: height 0.25s ease, width 0.25s ease;
+            transition: height 0.25s ease, width 0.25s ease;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle-service:before,
+        .circle.service:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 50%;
+            border: solid rgb(255, 255, 255, 0.4);
+        }
+        
+        .circle-service:before {
+            animation: ripple 2s linear infinite;
+        }
+        
+        .circle-service:after {
+            animation: ripple 2s linear 1s infinite;
+        }
+        
+        .circle-service:hover:before,
+        .circle-service:hover:after {
+            animation: none;
+            outline: none;
+        }
+        
+        .circle-service img {
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            transition: all 0.65s;
+            transform: rotateY(0deg);
+        }
+        
+        .circle-service:hover img {
+            transition: all 0.65s;
+            transform: rotateY(180deg);
+        }
+        
+        .circle-service:hover h4 {
+            display: block;
+            -webkit-animation: flip-in-hor-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: flip-in-hor-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        /* ----------------------------------------------
+ * Generated by Animista on 2019-8-6 17:21:14
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+        /**
+ * ----------------------------------------
+ * animation flip-in-hor-top
+ * ----------------------------------------
+ */
+        
+        @-webkit-keyframes flip-in-hor-top {
+            0% {
+                -webkit-transform: rotateX(-80deg);
+                transform: rotateX(-80deg);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: rotateX(0);
+                transform: rotateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes flip-in-hor-top {
+            0% {
+                -webkit-transform: rotateX(-80deg);
+                transform: rotateX(-80deg);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: rotateX(0);
+                transform: rotateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes ripple {
+            0% {
+                -webkit-transform: scale(0.5);
+                opacity: 1;
+            }
+            50% {
+                -webkit-transform: scale(1);
+                opacity: 0.5;
+            }
+            75% {
+                transform: scale(1.25);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.13);
+                opacity: 0.5;
+            }
+            75% {
+                transform: scale(1.16);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            margin-top: 25%;
+            width: 100%;
+        }
+        
+        .content {
+            width: 100%;
+            height: 65%;
+            z-index: 2;
+            margin-top: 8.5%;
+            font-size: 10px;
+            background: linear-gradient(to bottom, #294FA4 10%, black 90%)
+        }
+        
+        @keyframes animate {
+            0% {
+                transform: translateY(300px);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(150px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        
+        .content img {
+            float: right;
+        }
+        
+        .content h2 {
+            color: white;
+            text-align: center;
+            animation: try 2s linear ease;
+        }
+        
+        .content h4 {
+            color: white;
+            text-align: center;
+        }
+        
+        .content2 {
+            width: 100%;
+            height: auto;
+            background: black;
+        }
+        
+        .content2 .service-container {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            background: black;
+            /* align-items: flex-start;
+            align-items: flex-end;
+            align-items: center; */
+        }
+        
+        .content2 .service-container div {
+            /* border: 1px solid white; */
+            padding: 10px;
+        }
+        
+        .service-container-box {
+            flex-basis: 20%;
+        }
+        
+        @media screen and (max-width:850px) {
+            .content2 .service-container {
+                flex-direction: column;
+            }
+        }
+        
+        figure {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+        
+        figure:first-child {
+            background: radial-gradient(circle at 100px 100px, rgb(255, 255, 255), rgb(255, 255, 255));
+        }
+        
+        figure:nth-child(2) {
+            background-image: url("/images/earth2.svg");
+            background-repeat: repeat-x;
+            background-size: cover 100%;
+            opacity: 0.75;
+            animation: rotate-land 8s infinite linear;
+        }
+        
+        .swing {
+            position: relative;
+            animation: swing ease-in-out 2s infinite alternate;
+            transform-origin: center -20px;
+            float: left;
+        }
+        
+        .swing2 {
+            animation: swing2 ease-in-out 2.5s infinite alternate-reverse;
+            transform-origin: center -10px;
+            float: right;
+        }
+        
+        .swing3 {
+            animation: swing3 ease-in-out 3s infinite alternate;
+            transform-origin: center;
+            width: 60%;
+            height: 20%;
+        }
+        
+        .swing3 img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+            opacity: 0.1;
+        }
+        
+        .swing img {
+            display: block;
+            height: 200px;
+        }
+        
+        .swing2 img {
+            display: block;
+            height: 300px;
+            opacity: 1;
+        }
+        
+        .swing:after {
+            content: '';
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            top: -10px;
+            left: 50%;
+            z-index: 0;
+            transform: rotate(25deg);
+        }
+        /* nail */
+        
+        .swing:before {
+            content: '';
+            position: fixed;
+            width: 5px;
+            height: 5px;
+            top: -14px;
+            left: 54%;
+            z-index: 5;
+            border-radius: 50% 50%;
+        }
+        
+        @keyframes swing {
+            0% {
+                transform: translate(0, 10px);
+            }
+            100% {
+                transform: translate(0, -10px);
+            }
+        }
+        
+        @keyframes swing2 {
+            0% {
+                transform: translate(10px, 20);
+            }
+            100% {
+                transform: translate(-10px, -20px);
+            }
+        }
+        
+        @keyframes swing3 {
+            0% {
+                transform: translate(10px, 20px);
+            }
+            100% {
+                transform: translate(-10px, 0px);
+            }
+        }
+        
+        @keyframes try {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes rotate-land {
+            0% {
+                background-position: -631 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        
+        @keyframes rotate-cloud {
+            0% {
+                background-position: -796px 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        /*         
+        @media screen and (max-height: 890px) {
+            .circle {
+                margin-top: 200px;
+            }
+            .main svg text {
+                font-size: 4px;
+            }
+            .container {
+                margin-top: 0%;
+            }
+        } */
+        /* @media screen and (max-width:1000px) {
+            .circle {
+                top: 50%;
+            }
+            .main svg text {
+                font-size: 5px;
+            }
+        } */
+        /*         
+        @media screen and (max-width: 890px) {
+            .main {
+                margin-top: 10%;
+            }
+            .container {
+                margin-top: 0%;
+            }
+            .circle {
+                margin-top: 10px;
+            }
+        }
+                 */
+        /* @media screen and (max-width:500px) {
+            .main {
+                margin-top: 10%;
+            }
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        /* @media screen and (max-height:825px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 70%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        /*  
+        @media screen and (max-height:680px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:750px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:820px) {
+            .circle {
+                margin-top: 70%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 70%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        /* @media screen and (max-height:1024px) {
+            .circle {
+                margin-top: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        } */
+        
+        @media screen and (max-height:825px) {
+            .circle {
+                margin-top: 50%;
+            }
+            .main svg {
+                margin-top: 45%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:815px) {
+            .circle {
+                margin-top: 60%;
+                width: 200px;
+                height: 200px;
+            }
+            .main svg {
+                margin-top: 50%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:770px) {
+            .circle {
+                margin-top: -10%;
+            }
+            .main svg {
+                margin-top: -5%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 300px;
+            }
+            .swing2 img {
+                height: 200px;
+            }
+        }
+        
+        @media screen and (max-height:740px) {
+            .circle {
+                margin-top: 50%;
+            }
+            .main svg {
+                margin-top: 25%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height: 636px) {
+            .circle {
+                margin-top: -10%;
+            }
+            .main svg {
+                margin-top: -10%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 150px;
+            }
+        }
+        
+        @media screen and (max-height:570px) {
+            .circle {
+                margin-top: 50%;
+                width: 150px;
+                height: 150px;
+            }
+            .main svg {
+                margin-top: 20%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content2 {
+                height: 100%;
+            }
+            .content h4 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .swing img {
+                height: 100px;
+            }
+            .swing2 img {
+                height: 100px;
+            }
+            .content2 h1 {
+                font-size: 30px;
+            }
+        }
+        
+        .bird {
+            background-image: url('/images/bird-cells.svg');
+            background-size: auto 100%;
+            width: 88px;
+            z-index: -1;
+            height: 125px;
+            will-change: background-position;
+            animation-name: fly-cycle;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+        }
+        
+        .second-bird {
+            background-image: url('/images/bird-cells2.svg');
+            background-size: auto 100%;
+            width: 88px;
+            z-index: -1;
+            height: 125px;
+            will-change: background-position;
+            animation-name: fly-cycle;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+        }
+        
+        .bird--one {
+            animation-duration: 1s;
+            animation-delay: -0.5s;
+        }
+        
+        .bird--two {
+            animation-duration: 0.9s;
+            animation-delay: -0.75s;
+        }
+        
+        .bird--three {
+            animation-duration: 1.25s;
+            animation-delay: -0.25s;
+        }
+        
+        .bird--four {
+            animation-duration: 1.1s;
+            animation-delay: -0.5s;
+        }
+        
+        .bird-container {
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            transform: scale(0) translateX(-10vw);
+            will-change: transform;
+            animation-name: fly-right-one;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        .bird-container--one {
+            animation-duration: 15s;
+            animation-delay: 0;
+        }
+        
+        .bird-container--two {
+            animation-duration: 15s;
+            animation-delay: 1s;
+        }
+        
+        .bird-container--three {
+            animation-duration: 14.6s;
+            animation-delay: 9.5s;
+        }
+        
+        .bird-container--four {
+            animation-duration: 14.6s;
+            animation-delay: 10.25s;
+        }
+        
+        @keyframes fly-cycle {
+            100% {
+                background-position: -900px 0;
+            }
+        }
+        
+        @keyframes fly-right-one {
+            0% {
+                transform: scale(0.3) translateX(-10vw);
+            }
+            10% {
+                transform: translateY(2vh) translateX(10vw) scale(0.4);
+            }
+            20% {
+                transform: translateY(0vh) translateX(30vw) scale(0.5);
+            }
+            30% {
+                transform: translateY(4vh) translateX(50vw) scale(0.6);
+            }
+            40% {
+                transform: translateY(2vh) translateX(70vw) scale(0.6);
+            }
+            50% {
+                transform: translateY(0vh) translateX(90vw) scale(0.6);
+            }
+            60% {
+                transform: translateY(0vh) translateX(110vw) scale(0.6);
+            }
+            100% {
+                transform: translateY(0vh) translateX(110vw) scale(0.6);
+            }
+        }
+        
+        @keyframes fly-right-two {
+            0% {
+                transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+            }
+            10% {
+                transform: translateY(0vh) translateX(10vw) scale(0.4);
+            }
+            20% {
+                transform: translateY(-4vh) translateX(30vw) scale(0.6);
+            }
+            30% {
+                transform: translateY(1vh) translateX(50vw) scale(0.45);
+            }
+            40% {
+                transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+            }
+            50% {
+                transform: translateY(0vh) translateX(90vw) scale(0.45);
+            }
+            51% {
+                transform: translateY(0vh) translateX(110vw) scale(0.45);
+            }
+            100% {
+                transform: translateY(0vh) translateX(110vw) scale(0.45);
+            }
+        }
+        
+        form {
+            width: 50%;
+        }
+        
+        .file-container {
+            display: flex;
+            margin-top: 05%;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+        }
+        
+        .file-container form label {
+            color: #294FA4;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .file-container form input {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light ">
+        <a href="/home.html" class="navbar-brand"><img src="/images/waliv.png" width="180"></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-right: 50px;z-index: 99">
+
+            <div class="navbar-nav ml-auto">
+                <a href="/home.html" style="margin-right: 20px;color: #234786" class="nav-item nav-link active">Home</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" style="margin-right: 20px;color: #234786" data-toggle="dropdown">Company</a>
+                    <div class="dropdown-menu">
+                        <a href="/about_us.html#about_us" class="dropdown-item">About Us</a>
+                        <a href="/about_us.html#vision_mission" class="dropdown-item">Vision & Mission</a>
+
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" style="margin-right: 20px;color: #234786" data-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Maritime Technical Administration</a>
+                        <a href="#" class="dropdown-item">Crew Account Administration</a>
+                        <a href="#" class="dropdown-item">HSSE Administration</a>
+                        <a href="#" class="dropdown-item">Human Resource Management</a>
+                    </div>
+                </div>
+
+                <a href='#' style="margin-right: 20px;color:#234786" class="nav-item nav-link">Contact</a>
+                <a href='master.html' style="margin-right: 20px;color:#234786" class="nav-item nav-link">Login</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <h1 style="text-align: center;margin-top:100px;color:#294FA4">Welcome Admin.</h1>
+
+
+    <div class="file-container">
+
+        <form onsubmit="submit_report()">
+            <div class="form-group mx-5 ">
+                <label for="formGroupExampleInput ">Name:</label>
+                <input type="date" class="form-control" data-date-format="DD/MMMM/YYYY" id="name" placeholder="Example input ">
+            </div>
+            <div class="form-group mx-5 ">
+                <label for="sel1">Country:</label>
+                <select class="form-control" id="sel1" onchange="populate(this,'sel2')">
+                    <option default>-Choose One-</option>
+                      <option >Papua New Guinea</option>
+                      <option >Australia</option>
+                      <option>Cook Islands</option>
+                      <option>Micronesia</option>
+                    </select>
+            </div>
+            <div class="form-group mx-5 ">
+                <label for="sel1">Port:</label>
+                <select class="form-control" id="sel2">
+                         
+                        </select>
+            </div>
+
+
+            <div class="custom-file mx-5 ">
+                <input type="file" class="custom-file-input" id="customFile" placeholder="Choose File">
+                <label class="custom-file-label" for="customFile">Choose File</label>
+            </div>
+            <div class="form-group mx-5 py-3">
+                <button type="btn" class="btn btn-success">Submit</button>
+            </div>
+
+        </form>
+
+
+
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyC4fi9IhjP4ipoKghVCO0U99fWIOyf1l_A",
+
+                authDomain: "ship-service.firebaseapp.com",
+                databaseURL: "https://ship-service.firebaseio.com",
+                projectId: "ship-service",
+                storageBucket: "ship-service.appspot.com",
+                messagingSenderId: "633265655752",
+                appId: "1:633265655752:web:e084545a3cd944a6"
+
+            };
+            firebase.initializeApp(config);
+        </script>
+
+        <script>
+            function populate(s1, s2) {
+                var database = firebase.database();
+                var ref = database.ref(s1.value + "/");
+                ref.on('value', gotData, errData);
+
+
+            }
+
+            function gotData(data) {
+                document.getElementById('sel2').options.length = 0;
+                var value = data.val();
+                var keys = Object.keys(value);
+                for (var i = 0; i < keys.length; i++) {
+                    var k = keys[i];
+                    $('<option>').val(k).text(k).appendTo('#sel2');
+                    console.log(k);
+
+                }
+
+
+
+            }
+
+            function errData(err) {
+
+            }
+        </script>
+
+        <script>
+            function submit_report() {
+                event.preventDefault();
+                var country = document.getElementById("sel1").value;
+                var port = document.getElementById("sel2").value;
+                var name = document.getElementById("name").value;
+                var storage = firebase.storage();
+                var ref = storage.ref("Port_Reports").child("" + country).child("" + port).child("" + name);
+                var file = document.getElementById("customFile").files[0];
+                var task = ref.put(file);
+                task.on('state_changed', function(snapshot) {
+                    task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                        var database = firebase.database();
+                        database.ref("" + country).child("" + port).child("" + name).set({
+                            Name: name,
+                            Url: downloadURL
+                        });
+                    })
+                })
+
+
+
+
+
+
+                // var name = document.getElementById('name').value;
+
+                // var country = document.getElementById('sel1').value;
+                // var port = document.getElementById('sel2').value;
+
+
+
+
+            }
+        </script>
+        <!-- <h1 style="text-align: center; color: #294FA4 ">Your Tasks, Our Services.</h1> -
+            <div class="bird-container bird-container--one ">
+
+                <div class="bird bird--one "></div>
+            </div>
+            <div class="bird-container bird-container--two ">
+
+                <div class="second-bird bird--two "></div>
+            </div>
+            <div class="bird-container bird-container--three ">
+
+                <div class="bird bird--three "></div>
+            </div>
+            <div class="bird-container bird-container--four ">
+
+                <div class="second-bird bird--four "></div>
+            </div>
+
+
+
+            <!-- <div class="circle ">
+                <figure>
+
+                </figure>
+                <figure></figure>
+                <figure></figure>
+            </div> 
+
+
+        </div>
+        <svg viewBox="0 0 120 28 ">
+                <defs>
+                  <path id="wave " d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z " />
+                </defs> 
+                
+                 <use id="wave1 " class="wave " xlink:href="#wave " x="0 " y="-1 "></use>
+                 <use id="wave2 " class="wave " xlink:href="#wave " x="0 " y="0 "></use> 
+                <use id="wave4 " class="wave " xlink:href="#wave " x="0 " y="1 "></use>
+                
+              
+        </svg>
+
+
+
+        <!-- 
+        <div id="particles-js "></div>
+        <div id="particles-js2 "></div> -->
+    </div>
+    <!-- 
+    <div class="content ">
+        <div id="particles-js "></div>
+        <h1 style="text-align: center;color:white " class="ml3 ">About Us</h1>
+
+        <!-- <h1 style="text-align: center;color: white ">About Us</h1> 
+        <h4 class="ml4 ">
+
+            Waliv Global Services established in year 2011 has been providing Maritime Administration and Fleet Services to international shipping companies and ship management companies around the globe.
+        </h4>
+
+        <div class="swing ">
+            <img src="/images/Squid.png ">
+        </div>
+        <div class="swing2 ">
+            <img src="/images/Squid.png ">
+        </div>
+        <div class="swing3 ">
+            <img src="/images/Squid.png ">
+        </div>
+
+    </div> -->
+
+    <!-- <div class="content2 ">
+
+
+
+        <!-- <section class="services "> 
+        <h1 style="text-align:center;color:white ">OUR SERVICES</h1> -->
+
+    <!-- <div class="col-lg-3 col-md-6 ">
+
+            <div class="circle-service ">
+                <img src="/images/Technical.png " width="150 " height="150 " style="margin-top:30px;margin-left:30px ">
+
+                <h4 style="color:white;text-align:center;margin-top:60px ">Technical Management</h4>
+            </div>
+            <div class="circle-service ">
+                <img src="/images/Technical.png " width="150 " height="150 " style="margin-top:30px;margin-left:30px ">
+
+                <h4 style="color:white;text-align:center;margin-top:60px ">Technical Management</h4>
+            </div>
+
+        </div> -->
+
+
+
+
+    <!-- <footer class="footer-distributed ">
+
+        <div class="footer-left ">
+
+            <img src="images/waliv.png " width="60% " height="15% ">
+
+
+
+        </div>
+
+        <div class="footer-center ">
+
+            <div>
+                <i class="fa fa-map-marker "></i>
+                <p><span>G-101, Trinity Pride,Evershine City</span> Vasai(East)-401208, India</p>
+            </div><br>
+
+            <div>
+                <i class="fa fa-phone "></i>
+                <p><span>+91 823 700 4217 </span><span>+91 932 000 4217</span></p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope "></i>
+                <p><a href="mailto:admin@waliv.com ">admin@waliv.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right ">
+            <p>Contact Us</p>
+
+            <form action=" " method="post ">
+
+
+                <input type="text " id="txtemail " name="txtemail " placeholder=" Email " required />
+                <textarea name="txtmsg " id="txtmsg " placeholder=" Message "></textarea>
+                <button>Send</button>
+
+            </form>
+
+
+
+
+        </div>
+
+    </footer>
+
+ -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js "></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('input[type="file"]').change(function(e) {
+                var fileName = e.target.files[0].name;
+                var dflt = $(this).attr("placeholder");
+                if ($(this).val() != "") {
+                    $(this).next().text(fileName);
+                } else {
+                    $(this).next().text(dflt);
+                }
+
+
+            });
+        });
+    </script>
+
+    <script src="/js/particles.js "></script>
+    <script src="/js/app.js "></script>
+    <!-- 
+    <script>
+        function send_contact() {
+            var name = $('#txtname').val();
+            var contact = $("#txtcontact ").val();
+            //var profile = $('#profile').val();//
+            var email = $('#txtemail').val();
+            var msg = $('#txtmsg').val();
+            //alert(opts);	
+            var dataString = "name=" + escape(name) + '&' + " contact=" + escape(contact) + '&' + " email=" + escape(email) + '&' + " msg=" + escape(msg);
+            //alert(dataString);	
+            // $('#loading_icon').html('<img src=" assets/images/ajax-loader.gif " height="20 " width="20 " style="padding:5px 0px 0px 10px; ">');
+            $.ajax({
+                type: "POST ",
+                url: "send_cont.php ", // Name of the php files
+                data: dataString,
+                success: function(html) {
+                    /*$("#data_ok ").delay(2000).html(html);
+	    $("#loading_icon ").html('');
+	    $("#data_ok ").delay(2000).html('');*/
+
+                    setTimeout(function() {
+                        $('#data_ok').fadeIn(1000).html(html);
+                    });
+
+                    $("#loading_icon ").html('');
+                    setTimeout(function() {
+                        $('#data_ok').fadeOut(1000);
+                    }, 5000);
+                },
+            });
+        }
+    </script> -->
+
+
+
+
+
+</body>
+
+</html>

@@ -32,7 +32,14 @@
         body {
             font-family: 'Calibri';
             overflow-x: hidden;
-            /* background-color: #32B0E3; */
+            scroll-behavior: smooth;
+            /* background-color: #32B0E3; 
+            */
+        }
+        
+        .navbar-nav {
+            font-weight: bold;
+            text-transform: uppercase;
         }
         
         #particles-js canvas {
@@ -341,7 +348,7 @@
         
         .content {
             width: 100%;
-            height: 60%;
+            height: 65%;
             z-index: 2;
             margin-top: 8.5%;
             font-size: 10px;
@@ -1026,7 +1033,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-right: 150px;z-index: 99">
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-right: 50px;z-index: 99">
 
             <div class="navbar-nav ml-auto">
                 <a href="/home.html" style="margin-right: 20px;color: #234786" class="nav-item nav-link active">Home</a>
@@ -1034,8 +1041,8 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" style="margin-right: 20px;color: #234786" data-toggle="dropdown">Company</a>
                     <div class="dropdown-menu">
-                        <a href="/about_us.html#vision_mission" class="dropdown-item">Vission and Mission</a>
                         <a href="/about_us.html#about_us" class="dropdown-item">About Us</a>
+                        <a href="/about_us.html#vision_mission" class="dropdown-item">Vision & Mission</a>
 
                     </div>
                 </div>
@@ -1051,6 +1058,7 @@
                 </div>
 
                 <a href='#' style="margin-right: 20px;color:#234786" class="nav-item nav-link">Contact</a>
+                <a href='master.html' style="margin-right: 20px;color:#234786" class="nav-item nav-link">Login</a>
 
             </div>
         </div>
