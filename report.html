@@ -1047,8 +1047,7 @@
     </style>
 </head>
 
-<body>
-
+<body onload="func()">
     <nav class="navbar navbar-expand-md navbar-light ">
         <a href="/home.html" class="navbar-brand"><img src="/images/waliv.png" width="180"></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -1169,6 +1168,33 @@
             }
 
             function errData(err) {
+
+            }
+
+
+            function func() {
+                firebase.auth().onAuthStateChanged(function(user) {
+                    if (user) {
+                        // User is signed in.
+
+
+                        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+                            .then(function() {
+
+                            })
+                            .catch(function(error) {
+                                var errorCode = error.code;
+                                var errorMessage = error.message;
+                            })
+
+
+                    } else {
+                        // No user is signed in.
+
+                        window.location = "master.html";
+
+                    }
+                });
 
             }
         </script>
